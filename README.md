@@ -1,2 +1,0 @@
-# AgroFarm
-Project Akhir Dicoding
