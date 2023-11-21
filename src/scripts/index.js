@@ -1,3 +1,7 @@
+import './components/navbar';
+import App from './views/app';
+import '../styles/style.css';
+
 // Toggle class active untuk hamburger menu
 const navbarNav = document.querySelector('.navbar-nav');
 // ketika hamburger menu di klik
@@ -7,8 +11,6 @@ document.querySelector('#hamburger-menu').onclick = () => {
 
 // Klik di luar elemen
 const hm = document.querySelector('#hamburger-menu');
-const sb = document.querySelector('#search-button');
-const sc = document.querySelector('#shopping-cart-button');
 
 document.addEventListener('click', (e) => {
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
@@ -35,4 +37,18 @@ btnpopup.addEventListener('click', () => {
 
 iconclose.addEventListener('click', () => {
   wrapper.classList.remove('active');
+});
+
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  main: document.querySelector('#mainContent'),
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
 });

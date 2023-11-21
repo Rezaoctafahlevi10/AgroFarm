@@ -11,6 +11,8 @@
     },
     "rules": {
         "linebreak-style": 0,
-        "no-unused-vars": 0
+        "no-unused-vars": 0,
+        "no-underscore-dangle": 0,
+        "import/no-extraneous-dependencies": 0
     }
 }
