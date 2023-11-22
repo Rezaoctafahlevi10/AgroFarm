@@ -92,7 +92,22 @@ body {
   background: white;
   color: red;
 }
+.navbar .popup-register {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-left: 40px; */
+  cursor: pointer;
+}
 
+.navbar .popup-register:hover {
+  background: red;
+  color: white;
+}
 #hamburger-menu {
   display: none;
 }
@@ -110,7 +125,41 @@ body {
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
 }
+.profile-dropdown {
+  position: relative;
+}
 
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #c09b9b;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.profile-dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-dropdown:hover .profile-dropdown-content {
+  display: block;
+}
 .hero .mask-container {
   position: absolute;
   inset: 0;

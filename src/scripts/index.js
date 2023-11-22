@@ -18,6 +18,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
+
 const wrapper = document.querySelector('.wrapper');
 const loginlink = document.querySelector('.login-link');
 const registerlink = document.querySelector('.register-link');
@@ -52,3 +53,8 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 });
+//login 
+function toogleLogin() {
+  // Redirect to the login form page
+  window.location.href = "/login";
+}
