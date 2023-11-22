@@ -1,10 +1,10 @@
 class CustomFooter extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
      <footer>
       <div class="socials">
         <a href="#"><i data-feather="instagram"></i></a>
@@ -17,7 +17,7 @@ class CustomFooter extends HTMLElement {
       </div>
     </footer>
       `;
-    }
+  }
 }
 
 customElements.define('custom-footer', CustomFooter);

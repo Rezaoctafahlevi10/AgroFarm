@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROFARM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <!-- <link rel="stylesheet" href="/src/styles/style.css" /> -->
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <navbar-element></navbar-element>
+
+      
+    <!-- Background depan-->
+    <hero-element></hero-element>
+
+      <!-- login bar -->
+      <main id="mainContent" tabindex="0"></main>
+      
+      <div class="wrapper">
+        <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#" method="post">
+            <div class="form-input">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" name="email" required>
+              <label>Email</label>
+            </div>
+            <div class="form-input">
+              <span class="icon"><i class="fa-solid fa-lock"></i></i></span>
+              <input type="password" name="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox" name="remember">Remember me</label>
+              <a href="/home">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+              <p>Don't have account? <a href="#" class="register-link">Register</a></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-box register">
+          <h2>Registration</h2>
+          <form action="#" method="post">
+            <div class="form-input">
+              <span class="icon"><i class="fa-solid fa-user"></i></span>
+              <input type="text" name="username" required>
+              <label>Username</label>
+            </div>
+            <div class="form-input">
+              <span class="icon"><i class="fa-solid fa-lock"></i></i></span>
+              <input type="password" name="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox" name="remember">I Agree to the terms & conditions</label>
+              <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn">register</button>
+            <div class="login-register">
+              <p>Already have account? <a href="#" class="register-link">Login</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <!-- Prediksi Cuaca -->
+    <section id="prediksi" class="prediksi">
+      <h2>Prediksi Cuaca</h2>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <div class="content">
+          <p>Berikut adalah prediksi cuaca untuk beberapa hari/bulan/tahun kedepan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner -->
+    <section id="banner" class="banner">
+      <h2>Ini Banner</h2>
+    </section>
+
+    <!-- Products  -->
+    <section class="products" id="products">
+      <h2>Produk</h2>
+
+      <div class="row">
+        <div class="product-card">
+          <div class="product-icons"></div>
+          <div class="product-image">
+            <img src="/src/public/img/agrofarm.png" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Product 1</h3>
+            <div class="product-price">harga</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/src/public/img/agrofarm.png" alt="Product 2" />
+          </div>
+          <div class="product-content">
+            <h3>Product 2</h3>
+            <div class="product-price">harga</div>
+          </div>
+        </div>
+    </section>
+
+     <!-- Pencatatan Hasil Panen Form -->
+    <section id="hasil-panen" class="hasil-panen">
+      <h2>Pencatatan Hasil Panen</h2>
+      <p>Isi formulir di bawah ini untuk mencatat hasil panen Anda.</p>
+    
+      <div class="row">
+        <form action="#" method="post" class="hasil-panen-form">
+          <div class="input-group">
+            <label for="tanggal-panen"><i data-feather="calendar"></i>Tanggal Panen</label>
+            <input type="date" id="tanggal-panen" name="tanggal-panen" required />
+          </div>
+          <div class="input-group">
+            <label for="jenis-tanaman"><i data-feather="list"></i>Jenis Tanaman</label>
+            <input type="text" id="jenis-tanaman" name="jenis-tanaman" required />
+          </div>
+          <div class="input-group">
+            <label for="jumlah-panen"><i data-feather="box"></i>Jumlah Panen (kg)</label>
+            <input type="number" id="jumlah-panen" name="jumlah-panen" required />
+          </div>
+          <button type="submit" class="btn">Catat Hasil Panen</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.</p>
+      <div class="row">
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no hp" />
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+
+    <!-- Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
