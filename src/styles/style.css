@@ -51,7 +51,7 @@ body {
 }
 
 .navbar .navbar-nav a:hover {
-  color: #ff0000;
+  color: red;
 }
 
 .navbar .navbar-nav a::after {
