@@ -6,7 +6,7 @@ import './components/product';
 import './components/footer';
 import './components/pencatatan';
 import './components/contact';
-import App from './views/App';
+import App from './views/app';
 import '../styles/style.css';
 
 // Toggle class active untuk hamburger menu
