@@ -1,5 +1,12 @@
 import './components/navbar';
-import App from './views/app';
+import './components/hero';
+import './components/prediction';
+import './components/banner';
+import './components/product';
+import './components/footer';
+import './components/pencatatan';
+import './components/contact';
+import App from './views/App';
 import '../styles/style.css';
 
 // Toggle class active untuk hamburger menu
@@ -52,3 +59,8 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 });
+// login
+function toogleLogin() {
+  // Redirect to the login form page
+  window.location.href = '/login';
+}

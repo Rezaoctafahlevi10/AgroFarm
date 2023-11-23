@@ -13,6 +13,7 @@ class Navbar extends HTMLElement {
         <a href="#products">Produk</a>
         <a href="#contact">Kontak</a>
         <button class="popup-login">Login</button>
+        <button class="popup-register">Register</button>
       </div>
 
       <div class="navbar-extra">
