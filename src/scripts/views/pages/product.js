@@ -1,11 +1,11 @@
 // import Weather from '../../data/weather-source';
 // import { createDashboard } from '../templates/template-creator';
 
-const Weather = {
+const Product = {
   async render() {
     return `
       <div class="" id="main"></div>
-      <h2>ini adalah halaman Ramalan Cuaca</h2>
+      <h2>ini adalah halaman Produk</h2>
     `;
   },
 
@@ -17,4 +17,4 @@ const Weather = {
   },
 };
 
-export default Weather;
+export default Product;

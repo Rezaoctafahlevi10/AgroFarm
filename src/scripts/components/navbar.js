@@ -5,21 +5,23 @@ class Navbar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <nav class="navbar">
+    <header>
+    <nav id="drawer" class="navbar">
       <a href="#" class="navbar-logo">AGROFARM</a>
       <div class="navbar-nav">
-        <a href="#home">Home</a>
-        <a href="#prediksi">Prediksi Cuaca</a>
-        <a href="#products">Produk</a>
-        <a href="#contact">Kontak</a>
-        <button class="popup-login">Login</button>
-        <button class="popup-register">Register</button>
+        <a href="/#">Home</a>
+        <a href="/#/prediction">Prediksi Cuaca</a>
+        <a href="/#/product">Produk</a>
+        <a href="/#/contact">Kontak</a>
+        <a href="/#/login"><button class="popup-login">Login</button></a>
+        <a href="/#/register"><button class="popup-register">Register</button></a> 
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      <button id="menu">☰</button>
       </div>
     </nav>
+    </header>
 `;
   }
 }
