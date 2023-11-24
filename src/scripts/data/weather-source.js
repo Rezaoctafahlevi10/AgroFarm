@@ -1,6 +1,16 @@
 import API_ENDPOINT from '../global/api-endpoint';
 
 class Weather {
+  static async register() {
+    const response = await fetch('http://localhost:3000/register');
+
+    if (response.status === 200) {
+      const responseJson = await response.json();
+      return responseJson.data;
+    }
+    throw new Error(`Failed to fetch data: ${response.status}`);
+  }
+
   static async listWeather() {
     const response = await fetch(API_ENDPOINT.WEATHER);
 
