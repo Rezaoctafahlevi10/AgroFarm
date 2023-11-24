@@ -1,44 +1,13 @@
 import './components/navbar';
+import './components/hero';
+import './components/prediction';
+import './components/banner';
+import './components/product';
+import './components/footer';
+import './components/pencatatan';
+import './components/contact';
 import App from './views/app';
-import '../styles/style.css';
-
-// Toggle class active untuk hamburger menu
-const navbarNav = document.querySelector('.navbar-nav');
-// ketika hamburger menu di klik
-document.querySelector('#hamburger-menu').onclick = () => {
-  navbarNav.classList.toggle('active');
-};
-
-// Klik di luar elemen
-const hm = document.querySelector('#hamburger-menu');
-
-document.addEventListener('click', (e) => {
-  if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove('active');
-  }
-});
-
-
-const wrapper = document.querySelector('.wrapper');
-const loginlink = document.querySelector('.login-link');
-const registerlink = document.querySelector('.register-link');
-const btnpopup = document.querySelector('.popup-login');
-const iconclose = document.querySelector('.close');
-
-registerlink.addEventListener('click', () => {
-  wrapper.classList.add('active');
-});
-loginlink.addEventListener('click', () => {
-  wrapper.classList.remove('active');
-});
-
-btnpopup.addEventListener('click', () => {
-  wrapper.classList.add('active-popup');
-});
-
-iconclose.addEventListener('click', () => {
-  wrapper.classList.remove('active');
-});
+import '../styles/style.scss';
 
 const app = new App({
   button: document.querySelector('#menu'),
@@ -53,6 +22,7 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 });
+<<<<<<< HEAD
 //login 
 // function toogleLogin() {
 //   // Redirect to the login form page
@@ -66,3 +36,5 @@ window.addEventListener('load', () => {
     window.location.href = "/login";
   });
 });
+=======
+>>>>>>> e3e76662da74ec8b573d1c87a0055250ebd4086b

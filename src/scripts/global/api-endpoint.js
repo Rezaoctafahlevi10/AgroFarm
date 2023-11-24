@@ -1,7 +1,7 @@
 import CONFIG from './config';
 
 const API_ENDPOINT = {
-  LIST: `${CONFIG.BASE_URL}province`,
+  WEATHER: `${CONFIG.BASE_URL}provinces`,
   DETAIL: (id) => `${CONFIG.BASE_URL}weather/${id}`,
 };
 
