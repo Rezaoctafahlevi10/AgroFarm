@@ -54,7 +54,15 @@ window.addEventListener('load', () => {
   app.renderPage();
 });
 //login 
-function toogleLogin() {
-  // Redirect to the login form page
-  window.location.href = "/login";
-}
+// function toogleLogin() {
+//   // Redirect to the login form page
+//   window.location.href = "/login";
+// }
+window.addEventListener('load', () => {
+  const loginButton = document.getElementsByClassName("popup-login")
+
+  loginButton.addEventListener('click', () => {
+    // Redirect to the login form page
+    window.location.href = "/login";
+  });
+});

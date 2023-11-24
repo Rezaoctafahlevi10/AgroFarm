@@ -19,7 +19,6 @@ class App {
       main: this._main,
     });
   }
-
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
@@ -32,5 +31,4 @@ class App {
     });
   }
 }
-
 export default App;

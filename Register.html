@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Halaman Register</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="stylesheet" href="/Public/style.css">
+    </head>
+    <body class="form-loginBody">
+        <div class="container">
+            <h1>Register</h1>
+            <form action="/register" method="post">
+                <label for="Nama">Nama
+                <input type="text" name="nama" placeholder="nama" id="nama" required>
+                </label>
+                <label for="Email">Email
+                <input type="text" name="email" placeholder="Email" id="email" required>
+                <br>
+                <br>
+                <label for="Password">Password
+                </label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+                <br>
+                <label for="Role">Role
+                  <select id="role" name="role" required>
+                    <option value="1">Petani</option>
+                    <option value="0">Distributor</option>
+                  </select>
+                <br>
+                <button>Register</button>
+                <p> Already have an account?
+                  <a href="/login">Please login</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

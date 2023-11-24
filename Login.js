@@ -21,8 +21,7 @@ const koneksi = mysql.createConnection({
   
   //menset vie egine 
 //   app.set('view engine','hbs');
-  app.set('views', path.join(__dirname, 'View'));
-
+  app.set('views', path.join(__dirname, 'View')); 
   app.post('/login',(req,res)=>{
     const email =  req.body.email
     const password = req.body.password
