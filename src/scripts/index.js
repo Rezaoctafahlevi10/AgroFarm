@@ -22,3 +22,19 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 });
+<<<<<<< HEAD
+//login 
+// function toogleLogin() {
+//   // Redirect to the login form page
+//   window.location.href = "/login";
+// }
+window.addEventListener('load', () => {
+  const loginButton = document.getElementsByClassName("popup-login")
+
+  loginButton.addEventListener('click', () => {
+    // Redirect to the login form page
+    window.location.href = "/login";
+  });
+});
+=======
+>>>>>>> e3e76662da74ec8b573d1c87a0055250ebd4086b

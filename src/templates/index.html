@@ -12,9 +12,153 @@
   </head>
 
   <body>
+<<<<<<< HEAD
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">AGROFARM</a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#prediksi">Prediksi Cuaca</a>
+        <a href="#products">Produk</a>
+        <a href="#contact">Kontak</a>
+        <button class="popup-login">Login</button> <!-- tombol login belum fungsi karena toogle login tidak kedefinisi-->
+        <button class="popup-register">Register</button>  <!-- tombol register belum fungsi karena toogle register belum tidak kedefinisi-->
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+      
+    <!-- Background depan-->
+    <section class="hero" id="home">
+      <div class="mask-container">
+        <main class="content">
+          <h1>Ayo Majukan Pertanian <span>Indonesia</span></h1>
+        </main>
+      </div>
+    </section>
+
+    <!-- Prediksi Cuaca -->
+    <section id="prediksi" class="prediksi">
+      <h2>Prediksi Cuaca</h2>
+
+      <div class="row">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <div class="content">
+          <p>Berikut adalah prediksi cuaca untuk beberapa hari/bulan/tahun kedepan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner -->
+    <section id="banner" class="banner">
+      <h2>Ini Banner</h2>
+    </section>
+
+    <!-- Products  -->
+    <section class="products" id="products">
+      <h2>Produk</h2>
+
+      <div class="row">
+        <div class="product-card">
+          <div class="product-icons"></div>
+          <div class="product-image">
+            <img src="/src/public/img/agrofarm.png" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Product 1</h3>
+            <div class="product-price">harga</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/src/public/img/agrofarm.png" alt="Product 2" />
+          </div>
+          <div class="product-content">
+            <h3>Product 2</h3>
+            <div class="product-price">harga</div>
+          </div>
+        </div>
+    </section>
+
+     <!-- Pencatatan Hasil Panen Form -->
+    <section id="hasil-panen" class="hasil-panen">
+      <h2>Pencatatan Hasil Panen</h2>
+      <p>Isi formulir di bawah ini untuk mencatat hasil panen Anda.</p>
+    
+      <div class="row">
+        <form action="#" method="post" class="hasil-panen-form">
+          <div class="input-group">
+            <label for="tanggal-panen"><i data-feather="calendar"></i>Tanggal Panen</label>
+            <input type="date" id="tanggal-panen" name="tanggal-panen" required />
+          </div>
+          <div class="input-group">
+            <label for="jenis-tanaman"><i data-feather="list"></i>Jenis Tanaman</label>
+            <input type="text" id="jenis-tanaman" name="jenis-tanaman" required />
+          </div>
+          <div class="input-group">
+            <label for="jumlah-panen"><i data-feather="box"></i>Jumlah Panen (kg)</label>
+            <input type="number" id="jumlah-panen" name="jumlah-panen" required />
+          </div>
+          <button type="submit" class="btn">Catat Hasil Panen</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.</p>
+
+      <div class="row">
+        
+
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="no hp" />
+          </div>
+          <button type="submit" class="btn">kirim pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">AgroFarm</a> | &copy; 2023.</p>
+      </div>
+    </footer>
+
+    <!-- Icons -->
+=======
     <navbar-custom></navbar-custom>
     <main id="mainContent" tabindex="0"></main>
     <custom-footer></custom-footer>
+>>>>>>> e3e76662da74ec8b573d1c87a0055250ebd4086b
     <script>
       feather.replace();
     </script>
