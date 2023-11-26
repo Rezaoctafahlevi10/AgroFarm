@@ -1,8 +1,3 @@
-
-
-import RestaurantList from '../views/pages/dashboard';
-
-
 import Dashboard from '../views/pages/dashboard';
 import Product from '../views/pages/product';
 import Weather from '../views/pages/weather';

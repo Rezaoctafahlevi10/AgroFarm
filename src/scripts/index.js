@@ -22,8 +22,4 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> a577fbb34815248bd6f54ccad8af6d60b708a9c4
