@@ -1,6 +1,6 @@
-import CONFIG from '../../global/config';
-import weatherType from '../../global/weather-type';
-import dateConverter from '../../global/date-converter';
+import CONFIG from "../../global/config";
+import weatherType from "../../global/weather-type";
+import dateConverter from "../../global/date-converter";
 
 const createDashboard = () => `
   <div class="container-list">
@@ -15,7 +15,7 @@ const createDashboard = () => `
 
 const createFormRegister = () => `
   <div class="container-list">
-    <h2>ini adalah halaman Register</h2>
+    <h2>Registrasi Akunmu</h2>
     <register-form></register-form>
   </div>
 `;
@@ -26,14 +26,14 @@ const createWeatherDetail = (weather) => `
       <h2>Sekarang anda berada di ${weather.description}</h2>
     </div>
     <div class="body">
-  ${weather.parameter[6].timerange.map((item) => `
+  ${weather.parameter[6].timerange
+    .map(
+      (item) => `
     <p id="cuaca">Hari ini ${dateConverter(item.datetime)} cuacanya adalah ${weatherType(item.value[0].text)}</p>
-  `).join('')}
+  `
+    )
+    .join("")}
 </div>
   `;
 
-export {
-  createDashboard,
-  createFormRegister,
-  createWeatherDetail,
-};
+export { createDashboard, createFormRegister, createWeatherDetail };
