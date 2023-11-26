@@ -23,6 +23,10 @@ body {
 }
 
 //header
+<<<<<<< HEAD
+=======
+
+>>>>>>> a577fbb34815248bd6f54ccad8af6d60b708a9c4
 header {
   position: sticky;
   top: 0;
@@ -122,7 +126,7 @@ header {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 .form-loginBody {
-  background-image: url(https://img.freepik.com/free-photo/rice-field-bali_1385-1643.jpg?w=826&t=st=1700668214~exp=1700668814~hmac=028d5d4a34d93d82650c0a5710157e2c9c2591000d06185b1a1e65c52443adaa);
+  background-image: url("../public/img/agrofarmbg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -169,7 +173,7 @@ p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("/src/public/img/agrofarmbg.png");
+  background-image: url("../public/img/agrofarmbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -215,7 +219,7 @@ p {
 .hero .mask-container {
   position: absolute;
   inset: 0;
-  -webkit-mask-image: url("/src/public/img/agrofarmbg.png");
+  -webkit-mask-image: url("../public/img/agrofarmbg.png");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;

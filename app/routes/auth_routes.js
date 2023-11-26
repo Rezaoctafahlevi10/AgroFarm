@@ -28,9 +28,9 @@ const router = express.Router();
 const { signup, signin } = require('../controllers/auth.controller');
 
 // Rute untuk registrasi (signup)
-router.post('/signup', signup);
+router.post('/daftar', signup);
 
 // Rute untuk login (signin)
-router.post('/signin', signin);
+router.post('/login', signin);
 
 module.exports = router;

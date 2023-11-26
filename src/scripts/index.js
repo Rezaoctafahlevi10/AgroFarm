@@ -6,7 +6,8 @@ import './components/product';
 import './components/footer';
 import './components/pencatatan';
 import './components/contact';
-import App from './views/app';
+import './components/formRegister';
+import App from './views/App';
 import '../styles/style.scss';
 
 const app = new App({
@@ -21,4 +22,8 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> a577fbb34815248bd6f54ccad8af6d60b708a9c4

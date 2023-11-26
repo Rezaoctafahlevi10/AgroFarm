@@ -1,4 +1,4 @@
-import Weather from '../../data/weather-source';
+import Weather from '../../data/data-source';
 import { createDashboard } from '../templates/template-creator';
 
 const Dashboard = {
