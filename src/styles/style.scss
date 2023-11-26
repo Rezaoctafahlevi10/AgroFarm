@@ -105,6 +105,82 @@ header {
     }
   }
 
+//Login page
+
+//login percob
+
+.login-page{
+  margin: 30px 300px 30px 300px;
+  height: 500px  ;
+  background-color: #7ec275 ;
+  align-items: center;
+  // display: flex;
+
+  border-radius: 40px;
+}
+
+.login-page h2{
+  text-align: center;
+  margin: 40px;
+  padding-top: 40px;
+
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);;
+}
+
+.inner-log{
+  width: 380px;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 40px;
+
+  margin-left: 265px;
+}
+
+.inner-log h2{
+  margin-bottom: 3rem;
+  font-size: 40px;
+  color: black;
+  text-align: center;
+}
+
+label{
+  color: black;
+  font-weight: bold;
+  left: 20px;
+}
+
+#usernameLog{
+  width: 100%;
+  display: flex;
+  background-color: white;
+  height: 40px;
+
+  border-radius: 10px;
+}
+
+#passwordLog{
+  width: 100%;
+  display: flex;
+  background-color: white;
+  height: 40px;
+  margin-bottom: 1rem;
+
+  border-radius: 10px;
+}
+
+.inner-log button{
+  align-items: center;
+  width: 150px;
+  background-color: white;
+  height: 40px;
+
+  border-radius: 10px;
+  margin: 0 80px 0px 80px;
+
+  font-weight: bold;
+}
 
 #menu {
   display: none;
