@@ -23,19 +23,19 @@ body {
 }
 
 //header
-
-//header 2
-
 header {
   position: sticky;
   top: 0;
   background-color: #7ec275;
   z-index: 9999;
+}
+//header 2
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
+    background-color: #7ec275;
 
     .navbar-logo {
       font-size: 2rem;
@@ -104,7 +104,7 @@ header {
       color: white;
     }
   }
-}
+
 
 #menu {
   display: none;

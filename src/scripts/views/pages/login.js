@@ -6,8 +6,8 @@ const Login = {
     return `
     <div class="" id="main"></div>
         <h2>ini adalah halaman Login</h2>
-        <form action="http://localhost:3000/login" method="post">
-        <label for="username">Username:</label>
+        <form id = "LoginForm" action="http://localhost:9000/login"  method="post">
+        <label for="username">Email:</label>
         <input type="text" id="username" name="username" required><br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br>
@@ -15,13 +15,7 @@ const Login = {
         </form>
       `;
   },
-
   async afterRender() {
-    // const weather = await Weather.listWeather();
-    // const weatherContainer = document.querySelector('#main');
-    // weatherContainer.innerHTML += createDashboard(weather);
-    console.log('hallo');
   },
 };
-
 export default Login;

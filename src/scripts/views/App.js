@@ -19,11 +19,19 @@ class App {
       main: this._main,
     });
   }
+
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._main.innerHTML = await page.render();
-    await page.afterRender();
-  }
+
+    if (page) {
+      this._main.innerHTML = await page.render();
+      await page.afterRender();
+    } else {
+      // Handle unknown routes
+      this._main.innerHTML = '404 Not Found';
+    }
+  } 
 }
+
 export default App;

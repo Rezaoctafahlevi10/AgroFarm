@@ -6,7 +6,7 @@ const Register = {
     return `
     <div class="" id="main"></div>
       <h2>ini adalah halaman Register</h2>
-      <form action="http://localhost:3000/register" method="post">
+      <form action="http://localhost:9000/register" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br>
         <label for="password">Password:</label>
