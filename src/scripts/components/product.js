@@ -12,7 +12,7 @@ class CustomProduct extends HTMLElement {
       <div class="product-card">
         <div class="product-icons"></div>
         <div class="product-image">
-          <img src="/src/public/img/agrofarm.png" alt="Product 1" />
+          <img src="../img/agrofarm.png" alt="Product 1" />
         </div>
         <div class="product-content">
           <h3>Product 1</h3>
@@ -21,7 +21,7 @@ class CustomProduct extends HTMLElement {
       </div>
       <div class="product-card">
         <div class="product-image">
-          <img src="/src/public/img/agrofarm.png" alt="Product 2" />
+          <img src="../img/agrofarm.png" alt="Product 2" />
         </div>
         <div class="product-content">
           <h3>Product 2</h3>

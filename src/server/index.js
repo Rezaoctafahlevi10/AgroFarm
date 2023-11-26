@@ -1,5 +1,5 @@
 const express = require('express');
-const session = require('express-session');
+// const session = require('express-session');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
@@ -26,29 +26,35 @@ db.connect((err) => {
     console.log('Connected to the database');
   }
 });
-
-// Routes
-app.get('/', (req, res) => {
-  res.send('Welcome to the home page! <a href="/register">Register</a> or <a href="/login">Login</a>');
-});
+// Hash the password
+// const hashedPassword = await bcrypt.hash(password, 10);
 
 // Registration
 app.post('/register', async (req, res) => {
-  const { username, password } = req.body;
+  const {
+    username, email, password, provinsi, kota,
+  } = req.body;
 
-  // Hash the password
-  const hashedPassword = await bcrypt.hash(password, 10);
+  // Check for empty values
+  if (!username || !email || !password || !provinsi || !kota) {
+    res.send('Please provide all required information');
+    return;
+  }
 
   // Insert user into the database
-  db.query('INSERT INTO users (username, password) VALUES (?, ?)', [username, hashedPassword], (err, result) => {
-    if (err) {
-      console.error('Error registering user:', err); // Log the error details
-      res.send('Error registering user');
-    } else {
-      console.log('User registered successfully');
-      res.send('User registered successfully');
-    }
-  });
+  db.query(
+    'INSERT INTO users (username, email, password, provinsi, kota) VALUES (?, ?, ?, ?, ?)',
+    [username, email, password, provinsi, kota],
+    (err, result) => {
+      if (err) {
+        console.error('Error registering user:', err); // Log the error details
+        res.send('Error registering user');
+      } else {
+        console.log('User registered successfully');
+        res.send('User registered successfully');
+      }
+    },
+  );
 });
 
 // Login

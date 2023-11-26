@@ -1,6 +1,8 @@
 import CONFIG from '../../global/config';
+import weatherType from '../../global/weather-type';
+import dateConverter from '../../global/date-converter';
 
-const createDashboard = (restaurant) => `
+const createDashboard = () => `
   <div class="container-list">
     <hero-element></hero-element>
     <weather-prediction></weather-prediction>
@@ -11,18 +13,27 @@ const createDashboard = (restaurant) => `
   </div>
 `;
 
+const createFormRegister = () => `
+  <div class="container-list">
+    <h2>ini adalah halaman Register</h2>
+    <register-form></register-form>
+  </div>
+`;
+
 const createWeatherDetail = (weather) => `
   <div class="container-detail">
     <div class="head">
-      <h2>${weather.name}</h2>
+      <h2>Sekarang anda berada di ${weather.description}</h2>
     </div>
     <div class="body">
-      <p id="address">${weather.city} - ${weather.address}</p>
-      <p>${weather.description}</p>
-    </div>
+  ${weather.parameter[6].timerange.map((item) => `
+    <p id="cuaca">Hari ini ${dateConverter(item.datetime)} cuacanya adalah ${weatherType(item.value[0].text)}</p>
+  `).join('')}
+</div>
   `;
 
 export {
   createDashboard,
+  createFormRegister,
   createWeatherDetail,
 };

@@ -120,7 +120,7 @@ header {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 .form-loginBody {
-  background-image: url("/src/public/images/agrofarmbg.png");
+  background-image: url("../public/img/agrofarmbg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -167,7 +167,7 @@ p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("/src/public/images/agrofarmbg.png");
+  background-image: url("../public/img/agrofarmbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -213,7 +213,7 @@ p {
 .hero .mask-container {
   position: absolute;
   inset: 0;
-  -webkit-mask-image: url("/src/public/images/agrofarmbg.png");
+  -webkit-mask-image: url("../public/img/agrofarmbg.png");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
