@@ -439,6 +439,46 @@ p {
   line-height: 1.6;
 }
 
+//cuaca
+/* CSS for Weather Detail Element */
+.container-detail {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container-detail .head {
+  margin-bottom: 20px;
+}
+
+.container-detail h2 {
+  color: #000000;
+}
+
+.container-detail .body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-detail #cuaca {
+  width: 45%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #36563b;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-detail #cuaca img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-bottom: 10px;
+}
+
 /* banner */
 .banner {
   background-color: #7ec275;
