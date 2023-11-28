@@ -1,0 +1,33 @@
+GET http://localhost:3000/users
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "username": "iofi",
+    "email": "iofi@email.com",
+    "provinsi": "Jawa Timur",
+    "kota": "Banyuwangi",
+    "password": "1234567",
+    "confPassword": "1234567"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "udon@email.com",
+    "password": "123456"
+}
+###
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiVWRvbiIsImVtYWlsIjoidWRvbkBlbWFpbC5jb20iLCJpYXQiOjE3MDExMzI1NTUsImV4cCI6MTcwMTEzMjU3NX0.Pagi5_3FGp_uPlxf0gboV8h0BUSzxBlO7yd9OAZQvI4
+
+###
+
+GET http://localhost:3000/token
+
+###
+DELETE http://localhost:3000/logout
