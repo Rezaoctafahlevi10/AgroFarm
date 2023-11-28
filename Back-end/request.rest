@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 ###
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiaW9maSIsImVtYWlsIjoidWRpbkBlbWFpbC5jb20iLCJpYXQiOjE3MDExNTc0MTksImV4cCI6MTcwMTE1NzQzNH0.AmWqu5OOIqotz7HVflF0k9UN3a2Lpfl2yaxMQdg8qj4
+Authorization: Bearer 
 
 ###
 
