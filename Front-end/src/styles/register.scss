@@ -1,0 +1,49 @@
+.regis {
+    max-width: 400px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #7ec275;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 8px;
+        color: #ffffff;
+    }
+
+    input {
+        margin-bottom: 16px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 12px;
+        background-color: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+}
+#usernameLog {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    height: 40px;
+}

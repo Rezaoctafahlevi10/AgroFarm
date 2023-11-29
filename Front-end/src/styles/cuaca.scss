@@ -1,0 +1,90 @@
+.prediksi {
+    background-color: #fff;
+    color: black;
+    padding: 100px;
+  }
+  
+  .prediksi,
+  .banner,
+  .products,
+  .contact {
+    padding: rem 7% 3rem;
+  }
+  
+  .prediksi h2,
+  .banner,
+  .products h2,
+  .contact h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+  
+  .prediksi .row {
+    display: flex;
+  }
+  
+  .prediksi .row .prediksi-img {
+    flex: 1 1 45rem;
+  }
+  
+  .prediksi .row .prediksi-img img {
+    width: 80%;
+  }
+  
+  .prediksi .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+  }
+  
+  .prediksi .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .prediksi .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.6;
+  }
+
+  
+/* CSS for Weather Detail Element */
+.container-detail {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container-detail .head {
+  margin-bottom: 20px;
+}
+
+.container-detail h2 {
+  color: #000000;
+}
+
+.container-detail .body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-detail #cuaca {
+  width: 45%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #36563b;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-detail #cuaca img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-bottom: 10px;
+}

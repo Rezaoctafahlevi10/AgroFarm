@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import db from './config/database.js';
 // import Users from './models/UserModel.js'; // Hilangkan command kalau pertama kali dijalankan
+// import Article from './models/ArticleModel.js'; // Hilangkan command kalau pertama kali dijalankan
 import router from './routes/routes.js';
 
 dotenv.config();
@@ -13,6 +14,7 @@ try {
   await db.authenticate();
   console.log('database connected');
   // await Users.sync(); // Hilangkan command kalau pertama kali dijalankan
+  // await Article.sync(); // Hilangkan command kalau pertama kali dijalankan
 } catch (error) {
   console.error(error);
 }

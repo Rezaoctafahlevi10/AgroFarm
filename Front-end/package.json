@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon App.js",
-    "server": "nodemon app/server.js",
     "client": "webpack-dev-server --config webpack.dev.js",
-    "start-dev": "concurrently \"npm run server\" \"npm run client\""
+    "start-dev": "webpack-dev-server --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",

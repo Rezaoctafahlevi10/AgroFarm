@@ -1,0 +1,33 @@
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+
+    .socials {
+        padding: 1rem 0;
+
+        a {
+            color: #fff;
+            margin: 1rem;
+        }
+    }
+
+    .links {
+        margin-bottom: 1.4rem;
+
+        a {
+            color: #fff;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    .credit {
+        font-size: 0.8rem;
+
+        a {
+            color: var(--bg);
+            font-weight: 700;
+        }
+    }
+}
