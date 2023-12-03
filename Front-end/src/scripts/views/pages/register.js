@@ -5,7 +5,9 @@ import "../../../styles/style.scss";
 const Register = {
   async render() {
     return `
-    <div class="regis" id="main"></div>
+    <div class="regis">
+      <div class="innerRegist" id="main"></div>
+    </div>
     `;
   },
 
