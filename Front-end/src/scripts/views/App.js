@@ -27,7 +27,6 @@ class App {
       this._main.innerHTML = await page.render();
       await page.afterRender();
     } else {
-      // Handle unknown routes
       this._main.innerHTML = '404 Not Found';
     }
   } 

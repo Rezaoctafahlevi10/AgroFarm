@@ -12,7 +12,7 @@ const Register = {
   async afterRender() {
     const weather = await Weather.listWeather();
     const weatherContainer = document.querySelector("#main");
-    weatherContainer.innerHTML += createFormRegister(weather);
+    weatherContainer.innerHTML = createFormRegister(weather);
 
     const submitForm = document.querySelector("#buttonSave");
     const username = document.getElementById("username");

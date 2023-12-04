@@ -11,7 +11,7 @@ const Prediction = {
   async afterRender() {
     const weather = await Weather.detailWeather();
     const weatherContainer = document.querySelector('#main');
-    weatherContainer.innerHTML += createWeatherDetail(weather);
+    weatherContainer.innerHTML = createWeatherDetail(weather);
   },
 };
 
