@@ -27,7 +27,7 @@ class Register extends HTMLElement {
         <input type="password" id="password" rows="6" placeholder="Masukkan password mu disini"></input>
       </div>
       <div class="form-group">
-        <button id="buttonSave">Kirim Review</button>
+        <button id="buttonSave">Kirim</button>
       </div>
     </div>`;
   }

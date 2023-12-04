@@ -1,6 +1,6 @@
 .regis {
-    max-width: 400px;
     width: 100%;
+    min-height: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #7ec275;
@@ -25,10 +25,12 @@
     }
 
     input {
+        width: 70%;
+        margin-left: 10px;
         margin-bottom: 16px;
         padding: 10px;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 
     button {
@@ -40,10 +42,38 @@
         cursor: pointer;
     }
 }
-#usernameLog {
+
+.innerRegist {
     width: 100%;
-    background-color: white;
+    margin-left: 780px;
+    margin-top: 80px;
+    width: 380px;
+    border: 2px solid white;
+    height: 450px;
+    padding: 40px;
+    border-radius: 50px;
+}
+
+.form-group {
     display: flex;
-    border-radius: 10px;
-    height: 40px;
+    width: 100%;
+    color: white;
+}
+
+.form-group label{
+    width: 30%;
+    margin-top: 8px;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+}
+
+#buttonSave{
+    margin-top: 30px;
+    margin-left: 70px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    width: 60%;
 }
