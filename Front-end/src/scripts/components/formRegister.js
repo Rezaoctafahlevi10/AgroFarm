@@ -6,28 +6,32 @@ class Register extends HTMLElement {
   render() {
     this.innerHTML = `
     <div class="form">
-      <div class="form-group"> 
-        <label for="username">Username: </label>
-        <input type="text" id="username" class="form-control" placeholder="Masukkan username mu disini"/>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" class="form-control" placeholder="Masukkan usernamemu disini" />
       </div>
       <div class="form-group">
-        <label for="email">Email: </label>
-        <input type="email" id="email" rows="6" placeholder="Masukkan email mu disini"></input>
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control" placeholder="Masukkan emailmu disini" />
       </div>
       <div class="form-group">
-        <label for="provinsi">Provinsi: </label>
-        <input type="text" id="provinsi" rows="6" placeholder="Masukkan provinsi mu disini"></input>
+        <label for="provinsi">Provinsi:</label>
+        <input type="text" id="provinsi" class="form-control" placeholder="Masukkan provinsimu disini" />
       </div>
       <div class="form-group">
-        <label for="kota">Kota: </label>
-        <input type="text" id="kota" rows="6" placeholder="Masukkan kota mu disini"></input>
+        <label for="kota">Kota:</label>
+        <input type="text" id="kota" class="form-control" placeholder="Masukkan kotamu disini" />
       </div>
       <div class="form-group">
-        <label for="password">Password: </label>
-        <input type="password" id="password" rows="6" placeholder="Masukkan password mu disini"></input>
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control" placeholder="Masukkan passwordmu disini" />
       </div>
       <div class="form-group">
-        <button id="buttonSave">Kirim</button>
+        <label for="confPassword">Confirm Password:</label>
+        <input type="password" id="confPassword" class="form-control" placeholder="Masukkan passwordmu disini" />
+      </div>
+      <div class="form-group">
+        <button id="buttonSave" type="button">Kirim</button>
       </div>
     </div>`;
   }

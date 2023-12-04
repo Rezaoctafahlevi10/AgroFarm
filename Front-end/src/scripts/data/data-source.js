@@ -1,46 +1,17 @@
+import axios from 'axios';
 import API_ENDPOINT from '../global/api-endpoint';
 
 class Weather {
-  static async regiasterUser(registerData) {
-    try {
-      await fetch('http://localhost:3000/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(registerData),
-      });
-      console.log('User registration request sent successfully');
-    } catch (err) {
-      console.error('Error sending registration request:', err);
-    }
-  }
-
-  static async registerUser(registerData) {
+  static async register(registerData) {
     const showResponseMessage = (message = 'Check your internet connection') => {
       alert(message);
     };
 
     try {
-      const response = await fetch('http://localhost:3000/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(registerData),
-      });
-
-      const responseJson = await response.json();
-      showResponseMessage(responseJson.message);
-
-      if (responseJson.status === 'success') {
-        return true;
-      }
-      return false;
+      const response = await axios.post('http://localhost:3000/users', registerData);
+      console.log(response.data);
     } catch (error) {
-      showResponseMessage('Error registering user');
-      console.error('Error:', error);
-      return false;
+      showResponseMessage.error('Error:', error);
     }
   }
 

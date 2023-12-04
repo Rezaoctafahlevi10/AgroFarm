@@ -1,6 +1,7 @@
-import Weather from "../../data/data-source";
-import { createFormRegister } from "../templates/template-creator";
-import "../../../styles/style.scss";
+import axios from 'axios';
+import Weather from '../../data/data-source';
+import { createFormRegister } from '../templates/template-creator';
+import '../../../styles/style.scss';
 
 const Register = {
   async render() {
@@ -13,26 +14,28 @@ const Register = {
 
   async afterRender() {
     const weather = await Weather.listWeather();
-    const weatherContainer = document.querySelector("#main");
+    const weatherContainer = document.querySelector('#main');
     weatherContainer.innerHTML = createFormRegister(weather);
 
-    const submitForm = document.querySelector("#buttonSave");
-    const username = document.getElementById("username");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-    const provinsi = document.getElementById("provinsi");
-    const kota = document.getElementById("kota");
+    const submitForm = document.querySelector('#buttonSave');
+    const username = document.getElementById('username');
+    const email = document.getElementById('email');
+    const provinsi = document.getElementById('provinsi');
+    const kota = document.getElementById('kota');
+    const password = document.getElementById('password');
+    const confPassword = document.getElementById('confPassword');
 
-    submitForm.addEventListener("click", async (e) => {
+    submitForm.addEventListener('click', async (e) => {
       e.stopPropagation();
       const registerData = {
         username: username.value,
         email: email.value,
-        password: password.value,
         provinsi: provinsi.value,
         kota: kota.value,
+        password: password.value,
+        confPassword: confPassword.value,
       };
-      Weather.registerUser(registerData);
+      Weather.register(registerData);
     });
   },
 };
