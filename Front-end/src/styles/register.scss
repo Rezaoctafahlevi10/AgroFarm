@@ -1,5 +1,5 @@
 .regis {
-    width: 100%;
+    width: 70%;
     min-height: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -7,73 +7,83 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    h2 {
-        text-align: center;
-        color: #ffffff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+.regis h2 {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-    form {
-        display: flex;
-        flex-direction: column;
-    }
+.regis form {
+    display: flex;
+    flex-direction: column;
+}
 
-    label {
-        margin-bottom: 8px;
-        color: #ffffff;
-    }
+.regis label {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
 
-    input {
-        width: 70%;
-        margin-left: 10px;
-        margin-bottom: 16px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
+.regis input {
+    width: 100%; /* Adjusted width */
+    margin-left: 0; /* Removed margin-left */
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
 
-    button {
-        padding: 12px;
-        background-color: transparent;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        cursor: pointer;
-    }
+.regis button {
+    padding: 12px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .innerRegist {
     width: 100%;
-    margin-left: 780px;
-    margin-top: 80px;
-    width: 380px;
+    margin: 0 auto; /* Centering the form */
+    max-width: 380px;
     border: 2px solid white;
-    height: 450px;
+    height: 704px;
     padding: 40px;
     border-radius: 50px;
 }
 
 .form-group {
     display: flex;
-    width: 100%;
+    flex-direction: column;
     color: white;
 }
 
-.form-group label{
-    width: 30%;
+.form-group label {
+    width: 100%;
     margin-top: 8px;
     color: black;
     font-weight: bold;
-    text-align: right;
+    text-align: left;
 }
 
-#buttonSave{
+#buttonSave {
     margin-top: 30px;
-    margin-left: 70px;
+    margin-left: 0; /* Removed margin-left */
     background-color: white;
     color: black;
     font-size: 18px;
     font-weight: bold;
-    width: 60%;
+    width: 100%; /* Adjusted width */
+}
+
+@media screen and (max-width: 768px) {
+    .regis {
+        width: 90%; /* Adjusted width for smaller screens */
+        padding: 10px;
+    }
+
+    .innerRegist {
+        margin: 40px auto 0;
+    }
 }
