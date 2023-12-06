@@ -42,7 +42,7 @@ export const Login = async (req, res) => {
       },
     });
     const match = await bcrypt.compare(req.body.password, user[0].password);
-    if (!match) return res.status(400).json({ msg: 'Data yang dimasukkan tidak benar' });
+    if (!match) return res.status(400).json({ msg: 'Data yang dimasukkan salah!!' });
     const userId = user[0].id;
     const { username } = user[0];
     const { email } = user[0];
@@ -63,7 +63,7 @@ export const Login = async (req, res) => {
     });
     res.json({ accessToken });
   } catch (error) {
-    res.status(404).json({ msg: 'Data yang dimasukkan tidak benar' });
+    res.status(404).json({ msg: 'Data yang dimasukkan salah' });
   }
 };
 

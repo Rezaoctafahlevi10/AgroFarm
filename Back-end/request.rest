@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
     "username": "Syihabuddin",
-    "email": "udin123@gmail.com",
+    "email": "astaganaga@gmail.com",
     "provinsi": "Jawa Timur",
     "kota": "Banyuwangi",
     "password": "udin123456",
@@ -18,12 +18,12 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "email": "udin@gmail.com",
-    "password": "udin123"
+    "email": "astaganaga@gmail.com",
+    "password": "udin123456"
 }
 ###
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiaW9maSIsImVtYWlsIjoidWRpbkBlbWFpbC5jb20iLCJpYXQiOjE3MDEyMjIwMzksImV4cCI6MTcwMTIyMjA1NH0.snM5R79o0nppKWlsV5b5g38XHnbcUGxaRgGTQsucqxY
+Authorization: Bearer
 
 ###
 

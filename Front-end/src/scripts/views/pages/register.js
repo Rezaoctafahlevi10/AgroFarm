@@ -1,7 +1,5 @@
-import axios from 'axios';
 import Weather from '../../data/data-source';
 import { createFormRegister } from '../templates/template-creator';
-import '../../../styles/style.scss';
 
 const Register = {
   async render() {

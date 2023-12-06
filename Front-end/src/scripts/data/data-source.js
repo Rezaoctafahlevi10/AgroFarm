@@ -10,13 +10,28 @@ class Weather {
     try {
       const response = await axios.post('http://localhost:3000/users', registerData);
       console.log(response.data);
+      window.location.href = '/#/login';
     } catch (error) {
-      showResponseMessage.error('Error:', error);
+      showResponseMessage(error);
+    }
+  }
+
+  static async login(loginData) {
+    const showResponseMessage = (message = 'Check your internet connection') => {
+      alert(message);
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3000/login', loginData);
+      console.log(response.data);
+      window.location.href = '/#/';
+    } catch (error) {
+      showResponseMessage(error);
     }
   }
 
   static async listWeather() {
-    const response = await fetch(API_ENDPOINT.WEATHER);
+    const response = await fetch(API_ENDPOINT.LIST);
 
     if (response.status === 200) {
       const responseJson = await response.json();
