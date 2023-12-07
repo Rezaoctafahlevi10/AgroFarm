@@ -32,70 +32,7 @@ body {
 
 .contact {
   text-align: center;
-  padding: 50px 0;
-  background-color: #f8f9fa; /* Light gray background */
-}
-
-/* Title styling */
-.contact h2 {
-  color: #333;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-/* Subtitle styling */
-.contact p {
-  color: #555;
-  font-size: 1.2em;
-  margin-bottom: 40px;
-}
-
-/* Row container styling */
-.contact .row {
-  display: flex;
-  justify-content: space-around;
-}
-
-/* Button styling */
-.contact .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  font-size: 18px;
-  text-decoration: none;
-  color: #fff;
-  transition: background-color 0.3s ease-in-out;
-}
-
-/* Icon styling */
-.contact .btn img {
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
-}
-
-/* GitHub button styling */
-.contact .btn-dark {
-  background-color: #223243; /* Dark gray */
-}
-
-/* Instagram button styling */
-.contact .btn-danger {
-  background-color: #223243; /* Red */
-}
-
-/* Discord button styling */
-.contact .btn-primary {
-  background-color: #223243; /* Blue */
-}
-
-/* Hover effect */
-.contact .btn:hover {
-  background-color: #555;
+  padding: 5px 0;
 }
 
 /* banner */
@@ -104,11 +41,9 @@ body {
   padding: 100px;
 }
 
-.products h2,
 .contact h2 {
   margin-bottom: 1rem;
 }
-.products p,
 .contact p {
   text-align: center;
   max-width: 30rem;
@@ -318,21 +253,12 @@ body {
   .contact .row form {
     padding-top: 0;
   }
-
-  .contact .btn {
-    flex: 0 0 calc(50% - 20px); /* Set button width for medium screens */
-  }
+  
 }
 
 @media screen and (max-width: 600px) {
   .regis {
     max-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .contact .btn {
-    flex: 0 0 calc(100% - 20px); /* Set button width for small screens */
   }
 }
 

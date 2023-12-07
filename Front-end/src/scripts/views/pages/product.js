@@ -5,7 +5,7 @@ const Product = {
   async render() {
     return `
       <div class="" id="main"></div>
-      <h2>ini adalah halaman Produk</h2>
+      <h2>mau diganti ke page pencatatan</h2>
     `;
   },
 
