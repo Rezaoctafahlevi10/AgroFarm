@@ -1,35 +1,70 @@
 const weatherType = (value) => {
   switch (value) {
     case '0':
-      return 'Cerah';
+      return {
+        name: 'Cerah',
+        iconUrl: 'https://www.svgrepo.com/show/279157/sun-season.svg',
+      };
     case '1':
-      return 'Cerah Berawan';
     case '2':
-      return 'Cerah Berawan';
+      return {
+        name: 'Cerah Berawan',
+        iconUrl: 'https://www.svgrepo.com/show/279147/cloudy-forecast.svg',
+      };
     case '3':
-      return 'Berawan';
+      return {
+        name: 'Berawan',
+        iconUrl: 'https://www.svgrepo.com/show/279139/cloud-spring.svg',
+      };
     case '4':
-      return 'Berawan Tebal';
+      return {
+        name: 'Berawan Tebal',
+        iconUrl: 'https://www.svgrepo.com/show/279148/snowing-forecast.svg',
+      };
     case '5':
-      return 'Udara Kabur';
+      return {
+        name: 'Udara Kabur',
+        iconUrl: 'https://www.svgrepo.com/show/279155/tornado-forecast.svg',
+      };
     case '10':
-      return 'Asap';
+      return {
+        name: 'Asap',
+        iconUrl: 'https://www.svgrepo.com/show/405681/fog.svg',
+      };
     case '45':
-      return 'Kabut';
+      return {
+        name: 'Kabut',
+        iconUrl: 'https://www.svgrepo.com/show/528258/fog.svg',
+      };
     case '60':
-      return 'Hujan Ringan';
+      return {
+        name: 'Hujan Ringan',
+        iconUrl: 'https://www.svgrepo.com/show/279146/rain-forecast.svg',
+      };
     case '61':
-      return 'Hujan Sedang';
+      return {
+        name: 'Hujan Sedang',
+        iconUrl: 'https://www.svgrepo.com/show/279144/rain-forecast.svg',
+      };
     case '63':
-      return 'Hujan Lebat';
+      return {
+        name: 'Hujan Lebat',
+        iconUrl: 'https://www.svgrepo.com/show/279150/storm.svg',
+      };
     case '80':
-      return 'Hujan Lokal';
+      return {
+        name: 'Hujan Lokal',
+        iconUrl: 'https://www.svgrepo.com/show/279140/rain-forecast.svg',
+      };
     case '95':
-      return 'Hujan Petir';
     case '97':
-      return 'Hujan Petir';
+      return {
+        name: 'Hujan Petir',
+        iconUrl: 'https://www.svgrepo.com/show/279150/storm.svg',
+      };
     default:
-      return value;
+      return {
+      };
   }
 };
 

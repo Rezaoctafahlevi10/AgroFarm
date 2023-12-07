@@ -76,15 +76,25 @@ const createWeatherDetail = (weather) => `
       <h2>Sekarang anda berada di ${weather.description}</h2>
     </div>
     <div class="body">
-  ${weather.parameter[6].timerange
+      ${weather.parameter[6].timerange
     .map(
-      (item) => `
-    <p id="cuaca">Hari ini ${dateConverter(item.datetime)} cuacanya adalah ${weatherType(item.value[0].text)}</p>
-  `,
+      (item) => {
+        const weatherInfo = weatherType(item.value[0].text);
+
+        return `
+              <div id="cuaca">
+                <p>
+                  Hari ini ${dateConverter(item.datetime)} cuacanya adalah ${weatherInfo.name}
+                  <img src="${weatherInfo.iconUrl}" alt="${weatherInfo.name} Icon">
+                </p>
+              </div>
+            `;
+      },
     )
     .join('')}
-</div>
-    `;
+    </div>
+  </div>
+`;
 
 export {
   createDashboard, createFormRegister, createFormLogin, createWeatherDetail,

@@ -1,71 +1,27 @@
-.prediksi {
-    background-color: #fff;
-    color: black;
-    padding: 100px;
-  }
-  
-  .prediksi,
-  .banner,
-  .products,
-  .contact {
-    padding: rem 7% 3rem;
-  }
-  
-  .prediksi h2,
-  .banner,
-  .products h2,
-  .contact h2 {
-    text-align: center;
-    font-size: 2.6rem;
-    margin-bottom: 3rem;
-  }
-  
-  .prediksi .row {
-    display: flex;
-  }
-  
-  .prediksi .row .prediksi-img {
-    flex: 1 1 45rem;
-  }
-  
-  .prediksi .row .prediksi-img img {
-    width: 80%;
-  }
-  
-  .prediksi .row .content {
-    flex: 1 1 35rem;
-    padding: 0 1rem;
-  }
-  
-  .prediksi .row .content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .prediksi .row .content p {
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
-    font-weight: 100;
-    line-height: 1.6;
-  }
-
-  
-/* CSS for Weather Detail Element */
 .container-detail {
-  margin: 20px;
-  padding: 20px;
+  margin: 2%;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: box-shadow 0.3s ease; /* Efek transisi untuk box-shadow */
+}
+
+.container-detail:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Efek bayangan saat hover */
 }
 
 .container-detail .head {
-  margin-bottom: 20px;
+  margin-bottom: 2%;
+  background-color: rgb(9, 113, 35); /* Warna latar belakang untuk header */
+  color: white; /* Warna teks untuk header */
+  padding: 1%; /* Padding tambahan untuk header */
+  border-radius: 30px; /* Membuat sudut atas bulat */
 }
 
 .container-detail h2 {
-  color: #000000;
+  font-size: 2.5rem;
+  color: #ffffff; /* Warna teks untuk h2 */
 }
 
 .container-detail .body {
@@ -75,16 +31,34 @@
 }
 
 .container-detail #cuaca {
-  width: 45%;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #36563b;
-  border-radius: 8px;
+  flex-basis: 95%;
+  margin-bottom: 2%;
+  padding: 2%;
+  font-size: 30px;
+  background-color: #4CAF50; /* Warna latar belakang untuk cuaca */
+  color: white; /* Warna teks untuk cuaca */
+  border-radius: 55px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Efek transisi untuk scaling */
+}
+
+.container-detail #cuaca:hover {
+  transform: scale(1.05); /* Efek scaling saat hover */
 }
 
 .container-detail #cuaca img {
-  max-width: 50px;
-  max-height: 50px;
-  margin-bottom: 10px;
+  width: 70px; /* Sesuaikan ukuran gambar */
+  max-width: 100%;
+  max-height: 70px;
+}
+
+/* Tambahkan media queries untuk tampilan lebih kecil */
+@media only screen and (max-width: 768px) {
+  .container-detail #cuaca {
+    flex-basis: 100%;
+  }
+
+  .container-detail .body {
+    flex-direction: column;
+  }
 }
