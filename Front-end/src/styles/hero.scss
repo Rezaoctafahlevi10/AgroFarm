@@ -92,3 +92,26 @@
     border-radius: 0.5rem;
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   }
+
+  @media only screen and (max-width: 768px) {
+    .hero .content {
+        top: 50px; /* Adjusted top position for smaller screens */
+        padding: 1.4rem 5%; /* Adjusted padding for smaller screens */
+        position: static; /* Remove fixed positioning for smaller screens */
+    }
+
+    .hero .content h1 {
+        font-size: 3em; /* Adjusted font size for smaller screens */
+        line-height: 1.2; /* Ensure proper line height */
+        margin-bottom: 10px; /* Add margin to separate from other elements */
+    }
+
+    .hero .content p {
+        font-size: 1.4rem; /* Adjusted font size for smaller screens */
+        margin-top: 0.5rem; /* Adjusted top margin for smaller screens */
+    }
+
+    .hero .content .cta {
+        padding: 1rem 2rem; /* Adjusted padding for smaller screens */
+    }
+}

@@ -39,3 +39,33 @@ footer {
     font-size: 18px; /* Mengurangi ukuran font */
     margin-bottom: 5px; /* Mengurangi margin bottom */
 }
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    footer {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .socials a {
+        margin: 0 5px; /* Adjusted margin for smaller screens */
+    }
+
+    .socials img {
+        width: 20px; /* Adjusted image size for smaller screens */
+        height: 20px;
+    }
+
+    .credit {
+        margin-top: 5px;
+    }
+
+    .contact {
+        padding: 10px 0;
+    }
+
+    .contact p {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+        margin-bottom: 5px;
+    }
+}
