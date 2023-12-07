@@ -29,7 +29,7 @@ class App {
     } else {
       this._main.innerHTML = '404 Not Found';
     }
-  } 
+  }
 }
 
 export default App;

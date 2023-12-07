@@ -44,7 +44,11 @@ class Weather {
     const response = await fetch(API_ENDPOINT.DETAIL);
     if (response.status === 200) {
       const responseJson = await response.json();
-      return responseJson.data.forecast.area[1];
+      const descriptionsArray = responseJson
+        .data.forecast.area.map((areaItem) => areaItem.description);
+      console.log('Descriptions array:', descriptionsArray);
+
+      return responseJson.data.forecast.area[0];
     }
     throw new Error(`Failed to fetch data: ${response.status}`);
   }

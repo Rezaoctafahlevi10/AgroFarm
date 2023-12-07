@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import CONFIG from '../../global/config';
 import weatherType from '../../global/weather-type';
 import dateConverter from '../../global/date-converter';
@@ -44,13 +45,15 @@ const createFormRegister = (data) => `
       </div>
       <div class="form-group">
         <label for="provinsi">Provinsi:</label>
-        <select id="provinsi" name="provinsi">
-          ${data.map((province) => `<option>${province.id}</option>`).join('')}
+        <select name="provinsi" id="provinsi">
+          <option value="" selected="selected">Pilih Provinsi</option>
         </select>
       </div>
       <div class="form-group">
         <label for="kota">Kota:</label>
-        <input type="kota" id="kota" class="form-control" placeholder="Masukkan kotamu disini" />
+        <select name="kota" id="kota">
+          <option value="" selected="selected">Pilih Kota</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="password">Password:</label>
@@ -81,7 +84,7 @@ const createWeatherDetail = (weather) => `
     )
     .join('')}
 </div>
-  `;
+    `;
 
 export {
   createDashboard, createFormRegister, createFormLogin, createWeatherDetail,
