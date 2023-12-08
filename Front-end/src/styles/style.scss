@@ -152,9 +152,9 @@ body {
 
 /* Tablet */
 @media (max-width: 758px) {
-  html {
-    font-size: 62.5%;
-  }
+  // html {
+  //   font-size: 62.5%;
+  // }
 
   .prediksi .row {
     flex-wrap: wrap;
@@ -196,12 +196,5 @@ body {
 @media screen and (max-width: 600px) {
   .regis {
     max-width: 100%;
-  }
-}
-
-/* Mobile Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
   }
 }

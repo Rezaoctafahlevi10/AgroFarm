@@ -13,8 +13,8 @@ class Navbar extends HTMLElement {
         <div class="navbar-nav">
           <a href="/#">Home</a>
           <a href="/#/prediction">Prediksi Cuaca</a>
-          <a href="/#/product">Produk</a>
-          <a href="/#/contact">Kontak</a>
+          <a href="/#/pencatatan">Pencatatan</a>
+          <a href="/#/artikel">Artikel</a>
         </div>
         <div class="nav-auth">
           <a href="/#/login"><button class="popup-login">Login</button></a>

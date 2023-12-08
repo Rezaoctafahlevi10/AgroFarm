@@ -1,7 +1,7 @@
 // import Weather from '../../data/weather-source';
 // import { createDashboard } from '../templates/template-creator';
 
-const Contact = {
+const Artikel = {
   async render() {
     return `
     <div class="">
@@ -19,4 +19,4 @@ const Contact = {
   },
 };
 
-export default Contact;
+export default Artikel;

@@ -9,9 +9,8 @@ const Dashboard = {
   },
 
   async afterRender() {
-    const weather = await Weather.listWeather();
-    const weatherContainer = document.querySelector('#main');
-    weatherContainer.innerHTML = createDashboard(weather);
+    const dashboardContainer = document.querySelector('#main');
+    dashboardContainer.innerHTML = createDashboard();
   },
 };
 
