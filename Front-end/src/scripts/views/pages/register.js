@@ -12,25 +12,24 @@ const Register = {
   },
 
   async afterRender() {
-    const weather = await Weather.listWeather();
-    const weatherContainer = document.querySelector('#main');
-    weatherContainer.innerHTML = createFormRegister(weather);
+    const registerContainer = document.querySelector('#main');
+    registerContainer.innerHTML = createFormRegister();
 
-    const subjectSel = document.getElementById('provinsi');
-    const topicSel = document.getElementById('kota');
+    const provinceSel = document.getElementById('provinsi');
+    const citySel = document.getElementById('kota');
 
-    Object.keys(dataPlace).forEach((subject) => {
-      subjectSel.options[subjectSel.options.length] = new Option(subject, subject);
+    Object.keys(dataPlace).forEach((province) => {
+      provinceSel.options[provinceSel.options.length] = new Option(province, province);
     });
 
-    subjectSel.addEventListener('change', () => {
-      topicSel.length = 1;
+    provinceSel.addEventListener('change', () => {
+      citySel.length = 1;
 
-      const selectedSubject = dataPlace[subjectSel.value];
+      const selectedProvince = dataPlace[provinceSel.value];
 
-      if (selectedSubject) {
-        selectedSubject.forEach((topic) => {
-          topicSel.options[topicSel.options.length] = new Option(topic, topic);
+      if (selectedProvince) {
+        selectedProvince.forEach((city) => {
+          citySel.options[citySel.options.length] = new Option(city, city);
         });
       }
     });

@@ -1,21 +1,16 @@
-// import Weather from '../../data/weather-source';
-// import { createDashboard } from '../templates/template-creator';
+import { createArticle } from '../templates/template-creator';
 
 const Artikel = {
   async render() {
     return `
-    <div class="">
-    <h2>MAU DI GANTI KE ARTIKEL</h2>
-    </div>
-
+    <h2>ARTIKEL</h2>
+    <div class="" id="main"></div>
       `;
   },
 
   async afterRender() {
-    // const weather = await Weather.listWeather();
-    // const weatherContainer = document.querySelector('#main');
-    // weatherContainer.innerHTML += createDashboard(weather);
-    console.log('hallo');
+    const articleContainer = document.querySelector('#main');
+    articleContainer.innerHTML = createArticle();
   },
 };
 

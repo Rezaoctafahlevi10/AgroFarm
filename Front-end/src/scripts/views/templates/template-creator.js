@@ -11,6 +11,11 @@ const createDashboard = () => `
     <contact-element></contact-element>
   </div>
 `;
+
+const createArticle = () => `
+
+`;
+
 const createFormLogin = () => `
   <h2>AGROFARM</h2>
   <div class="form">
@@ -120,5 +125,10 @@ const createWeatherDetail = (weather) => `
 `;
 
 export {
-  createDashboard, createFormRegister, createFormLogin, createWeatherDetail, createNote,
+  createDashboard,
+  createFormRegister,
+  createFormLogin,
+  createWeatherDetail,
+  createNote,
+  createArticle,
 };

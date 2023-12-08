@@ -3,7 +3,6 @@ import './components/hero';
 import './components/prediction';
 import './components/banner';
 import './components/artikel';
-// import './components/product';
 import './components/footer';
 import './components/pencatatan';
 import './components/contact';
