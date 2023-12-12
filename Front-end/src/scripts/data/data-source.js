@@ -39,7 +39,7 @@ class Weather {
       console.log(username, exp);
     } catch (error) {
       if (error.response) {
-        window.location.href = '/#/artikel';
+        window.location.href = '/#/login';
       }
     }
   }
