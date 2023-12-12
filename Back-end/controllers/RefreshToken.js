@@ -11,12 +11,16 @@ const RefreshToken = async (req, res) => {
       },
     });
     if (!user[0]) return res.sendStatus(403);
-    jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
+    jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err) => {
       if (err) return res.sendStatus(403);
       const userId = user[0].id;
       const { username } = user[0];
       const { email } = user[0];
-      const accessToken = jwt.sign({ userId, username, email }, process.env.ACCESS_TOKEN_SECRET, {
+      const { provinsi } = user[0];
+      const { kota } = user[0];
+      const accessToken = jwt.sign({
+        userId, username, email, provinsi, kota,
+      }, process.env.ACCESS_TOKEN_SECRET, {
         expiresIn: '15s',
       });
       res.json({ accessToken });

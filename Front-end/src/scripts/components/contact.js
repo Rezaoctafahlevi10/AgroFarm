@@ -8,9 +8,7 @@ class Contact extends HTMLElement {
     <section id="contact" class="contact">
     <h2>Kontak Kami</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.</p>
-
     <div class="row">
-      
       <form action="">
         <div class="input-group">
           <i data-feather="user"></i>

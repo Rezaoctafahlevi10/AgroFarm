@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 import API_ENDPOINT from '../global/api-endpoint';
 
 class Weather {
@@ -8,7 +9,7 @@ class Weather {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/users', registerData);
+      const response = await axios.post(API_ENDPOINT.USERS, registerData);
       console.log(response.data);
       window.location.href = '/#/login';
     } catch (error) {
@@ -22,35 +23,89 @@ class Weather {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/login', loginData);
-      console.log(response.data);
-      window.location.href = '/#/';
+      await axios.post(API_ENDPOINT.LOGIN, loginData, { withCredentials: true });
     } catch (error) {
       showResponseMessage(error);
     }
   }
 
-  static async listWeather() {
-    const response = await fetch(API_ENDPOINT.LIST);
-
-    if (response.status === 200) {
-      const responseJson = await response.json();
-      return responseJson.data;
+  static async refreshToken() {
+    try {
+      const response = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
+      const responseJSON = response.data.accessToken;
+      const decoded = jwtDecode(responseJSON);
+      const username = (decoded.username);
+      const exp = (decoded.exp);
+      console.log(username, exp);
+    } catch (error) {
+      if (error.response) {
+        window.location.href = '/#/artikel';
+      }
     }
-    throw new Error(`Failed to fetch data: ${response.status}`);
+  }
+
+  static async listWeather() {
+    try {
+      const response = await axios.get(API_ENDPOINT.LIST);
+
+      if (response.status === 200) {
+        return response.data.data;
+      }
+
+      throw new Error(`Failed to fetch data: ${response.status}`);
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.error('Axios error:', error.message);
+        throw new Error('Failed to fetch data. Please check your internet connection.');
+      } else {
+        console.error('Non-Axios error:', error.message);
+        throw new Error('Failed to fetch data. Please try again later.');
+      }
+    }
   }
 
   static async detailWeather() {
-    const response = await fetch(API_ENDPOINT.DETAIL);
-    if (response.status === 200) {
-      const responseJson = await response.json();
-      const descriptionsArray = responseJson
-        .data.forecast.area.map((areaItem) => areaItem.description);
-      console.log('Descriptions array:', descriptionsArray);
+    try {
+      const response = await axios.get(API_ENDPOINT.DETAIL);
 
-      return responseJson.data.forecast.area[0];
+      if (response.status === 200) {
+        const { data } = response.data;
+        const descriptionsArray = data.forecast.area.map((areaItem) => areaItem.description);
+        console.log('Descriptions array:', descriptionsArray);
+
+        return data.forecast.area[0];
+      }
+
+      throw new Error(`Failed to fetch data: ${response.status}`);
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.error('Axios error:', error.message);
+        throw new Error('Failed to fetch data. Please check your internet connection.');
+      } else {
+        console.error('Non-Axios error:', error.message);
+        throw new Error('Failed to fetch data. Please try again later.');
+      }
     }
-    throw new Error(`Failed to fetch data: ${response.status}`);
+  }
+
+  static async listArticle() {
+    try {
+      const response = await axios.get(API_ENDPOINT.ARTICLE);
+
+      if (response.status === 200) {
+        return response.data;
+      }
+
+      throw new Error(`Failed to fetch data: ${response.status}`);
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.error('Axios error:', error.message);
+        throw new Error('Failed to fetch data. Please check your internet connection.');
+      } else {
+        console.error('Non-Axios error:', error.message);
+        throw new Error('Failed to fetch data. Please try again later.');
+      }
+    }
   }
 }
 

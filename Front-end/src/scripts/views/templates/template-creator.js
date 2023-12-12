@@ -1,19 +1,19 @@
-import weatherType from '../../global/weather-type';
-import dateConverter from '../../global/date-converter';
+import weatherType from '../../utils/weather-type';
+import dateConverter from '../../utils/date-converter';
 
 const createDashboard = () => `
   <div class="container-list">
     <hero-element></hero-element>
-    <weather-prediction></weather-prediction>
     <custom-banner></custom-banner>
-    <custom-product></custom-product>
-    <pencatatan-element></pencatatan-element>
-    <contact-element></contact-element>
   </div>
 `;
 
-const createArticle = () => `
-
+const createArticle = (article) => `
+  <div class="container-list" id "container-list">
+    <h3 id="restaurant-name">${article.title}</h3>
+    <p>${article.content}</p>
+    <a href="#/article/${article.id}">Cek Artikel</a>
+  </div>
 `;
 
 const createFormLogin = () => `

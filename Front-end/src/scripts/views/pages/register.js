@@ -1,5 +1,5 @@
 import Weather from '../../data/data-source';
-import dataPlace from '../../data/data-place';
+import dataPlace from '../../global/data-place';
 import { createFormRegister } from '../templates/template-creator';
 
 const Register = {

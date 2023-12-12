@@ -13,8 +13,8 @@ export const getArticle = async (_req, res) => {
 
 export const makeArticle = async (_req, res) => {
   const {
-    title, content
-  } = _req.body
+    title, content,
+  } = _req.body;
   try {
     await Article.create({
       title,

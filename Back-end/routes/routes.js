@@ -3,7 +3,7 @@ import {
   getUsers, Register, Login, Logout,
 } from '../controllers/Users.js';
 import { getArticle, makeArticle } from '../controllers/Articles.js';
-import { verifyToken } from '../middleware/verifyToken.js';
+import verifyToken from '../middleware/verifyToken.js';
 import RefreshToken from '../controllers/RefreshToken.js';
 
 const router = express.Router();

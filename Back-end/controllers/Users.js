@@ -46,10 +46,16 @@ export const Login = async (req, res) => {
     const userId = user[0].id;
     const { username } = user[0];
     const { email } = user[0];
-    const accessToken = jwt.sign({ userId, username, email }, process.env.ACCESS_TOKEN_SECRET, {
+    const { provinsi } = user[0];
+    const { kota } = user[0];
+    const accessToken = jwt.sign({
+      userId, username, email, provinsi, kota,
+    }, process.env.ACCESS_TOKEN_SECRET, {
       expiresIn: '20s',
     });
-    const refreshToken = jwt.sign({ userId, username, email }, process.env.REFRESH_TOKEN_SECRET, {
+    const refreshToken = jwt.sign({
+      userId, username, email, provinsi, kota,
+    }, process.env.REFRESH_TOKEN_SECRET, {
       expiresIn: '1d',
     });
     await Users.update({ refresh_token: refreshToken }, {
@@ -68,7 +74,7 @@ export const Login = async (req, res) => {
 };
 
 export const Logout = async (req, res) => {
-  const { refreshToken } = req.cookies;
+  const refreshToken = req.cookies.refreshToken;
   if (!refreshToken) return res.sendStatus(204);
   const user = await Users.findAll({
     where: {
@@ -77,7 +83,7 @@ export const Logout = async (req, res) => {
   });
   if (!user[0]) return res.sendStatus(204);
   const userId = user[0].id;
-  await Users.update({ refreshToken: null }, {
+  await Users.update({ refresh_token: null }, {
     where: {
       id: userId,
     },
