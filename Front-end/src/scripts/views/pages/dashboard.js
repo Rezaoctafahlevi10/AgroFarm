@@ -11,22 +11,41 @@ const Dashboard = {
   async afterRender() {
     const dashboardContainer = document.querySelector('#main');
     dashboardContainer.innerHTML = createDashboard();
+    let slides;
     let slideIndex = 0;
 
-    function showSlides() {
-      let i;
-      const slides = document.getElementsByClassName('mySlides');
-      // eslint-disable-next-line no-plusplus
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+    function initSlideshow() {
+      slides = document.querySelectorAll('.mySlides'); // Fetch slides once
+
+      function showSlides() {
+        let i;
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+
+        if (slides[slideIndex - 1]) {
+          slides[slideIndex - 1].style.display = 'block';
+        } else {
+          console.error('Undefined slide element at index:', slideIndex - 1);
+        }
+
+        setTimeout(showSlides, 2000);
       }
-      // eslint-disable-next-line no-plusplus
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex - 1].style.display = 'block';
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
+
+      if (!slides.length) {
+        console.error('No slides found with class "mySlides".');
+      } else {
+        showSlides();
+      }
     }
-    showSlides();
+
+    initSlideshow();
   },
 };
 
