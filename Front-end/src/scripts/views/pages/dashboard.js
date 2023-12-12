@@ -1,4 +1,5 @@
 /* eslint-disable no-plusplus */
+import Weather from '../../data/data-source';
 import { createDashboard } from '../templates/template-creator';
 
 const Dashboard = {
@@ -9,6 +10,7 @@ const Dashboard = {
   },
 
   async afterRender() {
+    await Weather.checkAuth();
     const dashboardContainer = document.querySelector('#main');
     dashboardContainer.innerHTML = createDashboard();
     let slides;

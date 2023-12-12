@@ -62,39 +62,39 @@ const createNote = () => `
 const createFormRegister = () => `
   <div class="container-list">
     <h2>Registrasi Akunmu</h2>
-    <div class="form">
+    <form class="form">
       <div class="form-group">
         <label for="username">Username:</label>
-        <input type="text" id="username" class="form-control" placeholder="Masukkan usernamemu disini" />
+        <input type="text" id="username" class="form-control" placeholder="Masukkan usernamemu disini" required/>
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" class="form-control" placeholder="Masukkan emailmu disini" />
+        <input type="email" id="email" class="form-control" placeholder="Masukkan emailmu disini" required/>
       </div>
       <div class="form-group">
         <label for="provinsi">Provinsi:</label>
-        <select name="provinsi" id="provinsi">
+        <select name="provinsi" id="provinsi" required>
           <option value="" selected="selected">Pilih Provinsi</option>
         </select>
       </div>
       <div class="form-group">
         <label for="kota">Kota:</label>
-        <select name="kota" id="kota">
+        <select name="kota" id="kota" required>
           <option value="" selected="selected">Pilih Kota</option>
         </select>
       </div>
       <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" id="password" class="form-control" placeholder="Masukkan passwordmu disini" />
+        <input type="password" id="password" class="form-control" placeholder="Masukkan passwordmu disini" required/>
       </div>
       <div class="form-group">
         <label for="confPassword">Confirm Password:</label>
-        <input type="password" id="confPassword" class="form-control" placeholder="Masukkan passwordmu disini" />
+        <input type="password" id="confPassword" class="form-control" placeholder="Masukkan passwordmu disini" required/>
       </div>
       <div class="form-group">
         <button id="buttonSave" type="button">Kirim</button>
       </div>
-    </div>
+    </form>
   </div>
 `;
 

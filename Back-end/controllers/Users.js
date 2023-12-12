@@ -17,6 +17,11 @@ export const Register = async (req, res) => {
   const {
     username, email, provinsi, kota, password, confPassword,
   } = req.body;
+
+  if (!username || !email || !provinsi || !kota || !password || !confPassword) {
+    return res.status(400).json({ msg: 'Semua field harus diisi' });
+  }
+
   if (password !== confPassword) return res.status(400).json({ msg: 'password tidak sama' });
   const salt = await bcrypt.genSalt();
   const hashPassword = await bcrypt.hash(password, salt);
