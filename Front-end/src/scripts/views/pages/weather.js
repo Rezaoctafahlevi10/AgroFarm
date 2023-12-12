@@ -1,5 +1,4 @@
 import Weather from '../../data/data-source';
-import UrlParser from '../../routes/url-parser';
 import { createWeatherDetail } from '../templates/template-creator';
 
 const Prediction = {
@@ -10,9 +9,13 @@ const Prediction = {
   },
 
   async afterRender() {
-    const weather = await Weather.detailWeather();
-    const weatherContainer = document.querySelector('#main');
-    weatherContainer.innerHTML = createWeatherDetail(weather);
+    try {
+      const weather = await Weather.detailWeather();
+      const weatherContainer = document.querySelector('#main');
+      weatherContainer.innerHTML = createWeatherDetail(weather);
+    } catch (error) {
+      /* empty */
+    }
   },
 };
 

@@ -45,7 +45,7 @@ class Weather {
 
   static async detailWeather() {
     try {
-      await this.checkAuth();
+      await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
 
       const response = await axios.get(API_ENDPOINT.DETAIL);
 
@@ -56,16 +56,17 @@ class Weather {
 
         return data.forecast.area[0];
       }
-
-      throw new Error(`Failed to fetch data: ${response.status}`);
+      throw new Error('Failed to fetch data');
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        console.error('Axios error:', error.message);
-        throw new Error('Failed to fetch data. Please check your internet connection.');
-      } else {
-        console.error('Non-Axios error:', error.message);
-        throw new Error('Failed to fetch data. Please try again later.');
+      if (error.response) {
+        swal({
+          text: 'Harap login terlebih dahulu!',
+        });
+        window.location.href = '/#/login';
       }
+
+      // Return null or undefined if there is no data
+      return null;
     }
   }
 
