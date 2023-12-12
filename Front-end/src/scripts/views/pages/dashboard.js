@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 import { createDashboard } from '../templates/template-creator';
 
 const Dashboard = {

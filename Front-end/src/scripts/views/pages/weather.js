@@ -1,4 +1,5 @@
 import Weather from '../../data/data-source';
+import UrlParser from '../../routes/url-parser';
 import { createWeatherDetail } from '../templates/template-creator';
 
 const Prediction = {

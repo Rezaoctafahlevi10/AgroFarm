@@ -1,4 +1,5 @@
 import axios from 'axios';
+import swal from 'sweetalert';
 import { jwtDecode } from 'jwt-decode';
 import API_ENDPOINT from '../global/api-endpoint';
 
@@ -29,43 +30,23 @@ class Weather {
     }
   }
 
-  static async refreshToken() {
+  static async checkAuth() {
     try {
-      const response = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
-      const responseJSON = response.data.accessToken;
-      const decoded = jwtDecode(responseJSON);
-      const username = (decoded.username);
-      const exp = (decoded.exp);
-      console.log(username, exp);
+      await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
     } catch (error) {
       if (error.response) {
+        swal({
+          text: 'Harap login terlebih dahulu!',
+        });
         window.location.href = '/#/login';
-      }
-    }
-  }
-
-  static async listWeather() {
-    try {
-      const response = await axios.get(API_ENDPOINT.LIST);
-
-      if (response.status === 200) {
-        return response.data.data;
-      }
-
-      throw new Error(`Failed to fetch data: ${response.status}`);
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        console.error('Axios error:', error.message);
-        throw new Error('Failed to fetch data. Please check your internet connection.');
-      } else {
-        console.error('Non-Axios error:', error.message);
-        throw new Error('Failed to fetch data. Please try again later.');
       }
     }
   }
 
   static async detailWeather() {
     try {
+      await this.checkAuth();
+
       const response = await axios.get(API_ENDPOINT.DETAIL);
 
       if (response.status === 200) {
