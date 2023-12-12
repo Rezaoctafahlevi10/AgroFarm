@@ -48,33 +48,7 @@ header {
       transform: scaleX(0.5);
     }
   }
-  .nav-auth {
-    display: flex;
-    
-    a {
-      color: #fff;
-      display: inline-block;
-      font-size: 1.3rem;
-      margin: 10px;
-      text-align: left;
-    }
-    a:hover {
-      color: red;
-    }
-    a::after {
-      content: "";
-      display: block;
-      padding-bottom: 0.5rem;
-      border-bottom: 0.1rem solid #fff;
-      transform: scaleX(0);
-      transition: 0.2s linear;
-    }
-    a:hover::after {
-      transform: scaleX(0.5);
-    }
-  }
-
-  .popup-login {
+  .popup {
     width: 130px;
     height: 50px;
     background: transparent;
@@ -83,24 +57,11 @@ header {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    margin: 10px;
   }
-  .popup-login:hover {
+  .popup:hover {
     background: white;
     color: red;
-  }
-  .popup-register {
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .popup-register:hover {
-    background: red;
-    color: white;
   }
 }
 

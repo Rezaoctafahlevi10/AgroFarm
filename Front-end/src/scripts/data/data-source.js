@@ -39,15 +39,37 @@ class Weather {
       const response = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
       if (response.status === 200) {
         const navAuth = document.querySelector('.nav-auth');
-        const elementsToHide = navAuth.querySelectorAll('.popup-login, .popup-register');
+        const navAuthHide = navAuth.querySelectorAll('.popup');
 
-        elementsToHide.forEach((element) => {
-          const hiddenElement = element;
-          hiddenElement.style.display = 'none';
+        navAuthHide.forEach((element) => {
+          const hiddenAuth = element;
+          hiddenAuth.style.display = 'none';
+        });
+
+        const navOut = document.querySelector('.logout');
+        const navOutHide = navOut.querySelectorAll('.popup');
+
+        navOutHide.forEach((element) => {
+          const hiddenOut = element;
+          hiddenOut.style.display = 'block';
         });
       }
     } catch (error) {
-      /* empty */
+      const navOut = document.querySelector('.logout');
+      const navOutHide = navOut.querySelectorAll('.popup');
+
+      navOutHide.forEach((element) => {
+        const hiddenOut = element;
+        hiddenOut.style.display = 'none';
+      });
+
+      const navAuth = document.querySelector('.nav-auth');
+      const navAuthHide = navAuth.querySelectorAll('.popup');
+
+      navAuthHide.forEach((element) => {
+        const hiddenAuth = element;
+        hiddenAuth.style.display = 'inline-block';
+      });
     }
   }
 

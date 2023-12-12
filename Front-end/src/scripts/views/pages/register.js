@@ -12,6 +12,7 @@ const Register = {
   },
 
   async afterRender() {
+    await Weather.checkAuth();
     const registerContainer = document.querySelector('#main');
     registerContainer.innerHTML = createFormRegister();
 

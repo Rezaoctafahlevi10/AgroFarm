@@ -9,6 +9,7 @@ const Login = {
       `;
   },
   async afterRender() {
+    await Weather.checkAuth();
     const weatherContainer = document.querySelector('#main');
     weatherContainer.innerHTML = createFormLogin();
 

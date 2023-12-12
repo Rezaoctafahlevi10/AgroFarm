@@ -17,9 +17,11 @@ class Navbar extends HTMLElement {
           <a href="/#/artikel">Artikel</a>
         </div>
         <div class="nav-auth">
-          <a href="/#/login"><button class="popup-login">Login</button></a>
-          <a href="/#/register"><button class="popup-register">Register</button></a>
-          <a href="/#/register"><button class="popup-register">Log Out</button></a>
+          <a href="/#/login"><button class="popup">Login</button></a>
+          <a href="/#/register"><button class="popup">Register</button></a>
+        </div>
+        <div class="logout">
+          <button class="popup">Log Out</button>
         </div>
       </nav>
       <button id="menu">☰</button>

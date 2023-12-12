@@ -9,6 +9,7 @@ const Prediction = {
   },
 
   async afterRender() {
+    await Weather.checkAuth();
     try {
       const weather = await Weather.detailWeather();
       const weatherContainer = document.querySelector('#main');

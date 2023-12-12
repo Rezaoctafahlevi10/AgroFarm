@@ -10,6 +10,7 @@ const Artikel = {
   },
 
   async afterRender() {
+    await Weather.checkAuth();
     const article = await Weather.listArticle();
     const articleContainer = document.querySelector('#main');
     article.forEach((articleItem) => {

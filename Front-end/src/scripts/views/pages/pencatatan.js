@@ -1,3 +1,4 @@
+import Weather from '../../data/data-source';
 import { createNote } from '../templates/template-creator';
 
 const Pencatatan = {
@@ -8,6 +9,7 @@ const Pencatatan = {
   },
 
   async afterRender() {
+    await Weather.checkAuth();
     const pencatatanContainer = document.querySelector('#main');
     pencatatanContainer.innerHTML = createNote();
   },
