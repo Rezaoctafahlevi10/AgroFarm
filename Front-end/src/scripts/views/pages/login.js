@@ -4,6 +4,7 @@ import { createFormLogin } from '../templates/template-creator';
 const Login = {
   async render() {
     return `
+    <img class="background-login" src="../../img/background1.png" alt=""> 
     <div class="login-page" id="login-container">
     </div>
       `;
