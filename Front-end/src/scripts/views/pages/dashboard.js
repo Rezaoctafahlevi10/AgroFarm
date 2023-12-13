@@ -17,7 +17,7 @@ const Dashboard = {
     let slideIndex = 0;
 
     function initSlideshow() {
-      slides = document.querySelectorAll('.mySlides'); // Fetch slides once
+      slides = document.querySelectorAll('.mySlides');
 
       function showSlides() {
         let i;

@@ -1,6 +1,8 @@
+import Weather from '../data/data-source';
+
 const DrawerInitiator = {
   init({
-    button, drawer, main,
+    button, drawer, main, logout,
   }) {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer);
@@ -8,6 +10,10 @@ const DrawerInitiator = {
 
     main.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer);
+    });
+
+    logout.addEventListener('click', (event) => {
+      Weather.logout();
     });
   },
 

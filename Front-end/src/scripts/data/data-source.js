@@ -34,6 +34,35 @@ class Weather {
     }
   }
 
+  static async logout() {
+    try {
+      swal('Apakah anda ingin LogOut dari akun anda?', {
+        buttons: {
+          cancel: 'Tidak',
+          catch: {
+            text: 'Iya!',
+            value: 'true',
+          },
+        },
+      })
+        .then((value) => {
+          switch (value) {
+            case 'true':
+              axios.delete(API_ENDPOINT.LOGOUT, { withCredentials: true });
+              swal('Berhasil LogOut!', 'Silahkan refresh halaman ini', 'success');
+              break;
+
+            default:
+              swal('Tidak jadi logOut');
+          }
+        });
+    } catch (error) {
+      swal({
+        text: 'Terjadi kesalahan pada website mohon coba lagi',
+      });
+    }
+  }
+
   static async checkAuth() {
     try {
       const response = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
