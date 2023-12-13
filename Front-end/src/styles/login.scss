@@ -1,6 +1,6 @@
 .login-page {
   margin: 30px auto;
-  max-width: 800px; /* Adjusted max-width */
+  max-width: 800px;
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   border-radius: 40px;
   h2 {
     text-align: center;
-    margin: 40px 20px; /* Adjusted margin */
+    margin: 40px 20px;
     padding-top: 40px;
     font-size: 40px;
     color: white;
@@ -17,63 +17,64 @@
   }
 }
 
-
-.form {
-  width: 100%; /* Adjusted width */
-  max-width: 380px;
-  border: 2px solid white;
-  padding: 40px;
-  border-radius: 50px;
-  margin: 0 auto; /* Centering the form */
-
-  h2 {
-      margin-bottom: 3rem;
-      font-size: 40px;
-      color: black;
-      text-align: center;
-  }
-
-  label {
-      color: black;
-      font-weight: bold;
-      margin-bottom: 8px; /* Adjusted margin */
-  }
-
-  button {
-      width: 100%; /* Adjusted width */
-      background-color: white;
-      height: 40px;
-      border-radius: 10px;
-      margin: 0 0 10px 0; /* Adjusted margin */
-      font-weight: bold;
-  }
-
-  button:hover {
-      color: red;
-      background-color: #ffffff;
-  }
-
-  input {
-      width: 100%;
-      height: 30px;
-      padding: 10px;
-      background-color: white;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      font-size: 20px;
+.logo {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 40%;
   }
 }
 
-/* Media query for smaller screens */
+
+.form-login {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 380px;
+  padding: 50px;
+  border-radius: 50px;
+  border: 2px solid white;
+
+  .form-group-login {
+      display: flex;
+      flex-direction: column;
+      padding-block: 10px;
+
+      input {
+          padding: 0.6rem;
+          border-radius: 10px;
+      }
+
+      select {
+          padding: 0.6rem;
+          border-radius: 10px;
+      }
+
+      input::placeholder {
+          color: black;
+      }
+  }
+  p {
+    color: black;
+    text-align: end;
+    padding-right: 20px;
+  }
+  a {
+    color: blue;
+  }
+  a:hover {
+    color: purple;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .login-page {
-      margin: 20px auto; /* Adjusted margin */
+      margin: 20px auto;
   }
 
   .form {
-      padding: 20px; /* Adjusted padding */
+      padding: 20px;
       button {
-          margin: 0 0 5px 0; /* Adjusted margin */
+          margin: 0 0 5px 0;
       }
   }
 

@@ -1,85 +1,94 @@
-.regis {
-    width: 70%;
-    min-height: 600px;
+.background-register {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
+
+.register-list {
+    display: flex;
+    width: 80%;
     margin: 50px auto;
-    padding: 20px;
     background-color: #7ec275;
-    border: 1px solid #ccc;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.regis h2 {
-    text-align: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.regis form {
-    display: flex;
-    flex-direction: column;
-}
-
-.regis label {
-    margin-bottom: 8px;
-    color: #ffffff;
-}
-
-.regis input {
-    width: 100%; /* Adjusted width */
-    margin-left: 0; /* Removed margin-left */
-    margin-bottom: 16px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.regis button {
-    padding: 12px;
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
     border-radius: 20px;
-    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5rem;
+        align-items: center;
+        font-weight: 900;
+        text-align: center;
+
+        span {
+            color: red;
+        }
+
+        img {
+            width: 70%;
+
+        }
+    }
 }
 
-.innerRegist {
+.form-register {
     width: 100%;
-    margin: 0 auto; /* Centering the form */
+    margin: 0 auto;
     max-width: 380px;
-    border: 2px solid white;
-    height: 704px;
-    padding: 40px;
+    padding: 20px;
     border-radius: 50px;
+
+    .form-group-register {
+        display: flex;
+        flex-direction: column;
+        padding-block: 10px;
+
+        input {
+            padding: 0.6rem;
+            border-radius: 10px;
+        }
+
+        select {
+            padding: 0.6rem;
+            border-radius: 10px;
+        }
+
+        input::placeholder {
+            color: black;
+        }
+    }
+    p {
+        color: black;
+        text-align: end;
+        padding-right: 20px;
+    }
+    a {
+        color: blue;
+    }
+    a:hover {
+        color: purple;
+    }
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-
-.form-group label {
-    width: 100%;
-    margin-top: 8px;
-    color: black;
-    font-weight: bold;
-    text-align: left;
-}
 
 #buttonSave {
-    margin-top: 30px;
-    margin-left: 0; /* Removed margin-left */
+    margin-top: 5px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-left: 0;
     background-color: white;
     color: black;
+    cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    width: 100%; /* Adjusted width */
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
     .regis {
-        width: 90%; /* Adjusted width for smaller screens */
+        width: 90%;
         padding: 10px;
     }
 

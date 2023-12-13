@@ -17,21 +17,21 @@ const createArticle = (article) => `
 `;
 
 const createFormLogin = () => `
-  <h2>AGROFARM</h2>
-  <div class="form">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" class="form-control" placeholder="Masukkan emailmu disini" />
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" class="form-control" placeholder="Masukkan passwordmu disini" />
-      </div>
-      <div class="form-group">
-        <button id="buttonSave" type="button">Kirim</button>
-      </div>
-    </div>
+  <div class="logo">
+    <img src="../../icons/icon-512x512.png" alt="">
   </div>
+  <form class="form-login">
+    <div class="form-group-login">
+      <input type="email" id="email" class="form-control" placeholder="Email" />
+    </div>
+    <div class="form-group-login">
+      <input type="password" id="password" class="form-control" placeholder="Password" />
+    </div>
+    <div class="form-group-login">
+      <button id="buttonSave" type="button">Kirim</button>
+    </div>
+    <p>Don't Have an Account? <a href="/#/register">Sign Up</a></p>
+  </form>
 `;
 
 const createNote = () => `
@@ -60,41 +60,42 @@ const createNote = () => `
 `;
 
 const createFormRegister = () => `
-  <div class="container-list">
-    <h2>Registrasi Akunmu</h2>
-    <form class="form">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" class="form-control" placeholder="Masukkan usernamemu disini" required/>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" class="form-control" placeholder="Masukkan emailmu disini" required/>
-      </div>
-      <div class="form-group">
-        <label for="provinsi">Provinsi:</label>
-        <select name="provinsi" id="provinsi" required>
-          <option value="" selected="selected">Pilih Provinsi</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="kota">Kota:</label>
-        <select name="kota" id="kota" required>
-          <option value="" selected="selected">Pilih Kota</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" class="form-control" placeholder="Masukkan passwordmu disini" required/>
-      </div>
-      <div class="form-group">
-        <label for="confPassword">Confirm Password:</label>
-        <input type="password" id="confPassword" class="form-control" placeholder="Masukkan passwordmu disini" required/>
-      </div>
-      <div class="form-group">
-        <button id="buttonSave" type="button">Kirim</button>
-      </div>
-    </form>
+  <div class="register-list">
+    <div class="content">
+    <img src="../../icons/icon-512x512.png" alt="">
+      <h1>Ayo Majukan Pertanian <br> <span>Indo</span>nesia</h1>
+    </div>
+    <div class="form-register">
+      <form class="form-register">
+        <h2>Registrasi Akunmu</h2>
+        <div class="form-group-register">
+          <input type="text" id="username" class="form-control" placeholder="Username" required/>
+        </div>
+        <div class="form-group-register">
+          <input type="email" id="email" class="form-control" placeholder="Email" required/>
+        </div>
+        <div class="form-group-register">
+          <select name="provinsi" id="provinsi" required>
+            <option value="" selected="selected">Pilih Provinsi</option>
+          </select>
+        </div>
+        <div class="form-group-register">
+          <select name="kota" id="kota" required>
+            <option value="" selected="selected">Pilih Kota</option>
+          </select>
+        </div>
+        <div class="form-group-register">
+          <input type="password" id="password" class="form-control" placeholder="Password" required/>
+        </div>
+        <div class="form-group-register">
+          <input type="password" id="confPassword" class="form-control" placeholder="Confirm Password" required/>
+        </div>
+        <div class="form-group-register">
+          <button id="buttonSave" type="button">Register</button>
+        </div>
+      </form>
+      <p>Already have account? <a href="/#/login">Log in</a></p>
+    </div>
   </div>
 `;
 

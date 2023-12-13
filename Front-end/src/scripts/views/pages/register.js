@@ -5,9 +5,8 @@ import { createFormRegister } from '../templates/template-creator';
 const Register = {
   async render() {
     return `
-    <div class="regis">
-      <div class="innerRegist" id="main"></div>
-    </div>
+    <img class="background-register" src="../../img/background1.png" alt=""> 
+    <div class="innerRegist" id="main"></div>
     `;
   },
 

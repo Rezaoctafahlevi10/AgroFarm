@@ -48,6 +48,11 @@
   .hero .mask-container {
     position: absolute;
     inset: 0;
+    mask-image: url("../public/img/agrofarmbg.png");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
+
     -webkit-mask-image: url("../public/img/agrofarmbg.png");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;

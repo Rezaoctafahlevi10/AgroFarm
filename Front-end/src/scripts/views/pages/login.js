@@ -4,14 +4,14 @@ import { createFormLogin } from '../templates/template-creator';
 const Login = {
   async render() {
     return `
-    <div class="login-page" id="main">
+    <div class="login-page" id="login-container">
     </div>
       `;
   },
   async afterRender() {
     await Weather.checkAuth();
-    const weatherContainer = document.querySelector('#main');
-    weatherContainer.innerHTML = createFormLogin();
+    const loginContainer = document.querySelector('#login-container');
+    loginContainer.innerHTML = createFormLogin();
 
     const submitForm = document.querySelector('#buttonSave');
     const email = document.getElementById('email');
