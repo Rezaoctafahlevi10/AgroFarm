@@ -1,6 +1,6 @@
-import Article from '../models/ArticleModel.js';
+import Article from '../models/PencatatanModel.js';
 
-export const getArticle = async (_req, res) => {
+export const getNote = async (_req, res) => {
   try {
     const articles = await Article.findAll({
       attributes: ['id', 'title', 'content'],
@@ -11,16 +11,18 @@ export const getArticle = async (_req, res) => {
   }
 };
 
-export const makeArticle = async (_req, res) => {
+export const makeNote = async (_req, res) => {
   const {
-    title, content,
+    userId, tanaman, jumlah, tanggal,
   } = _req.body;
   try {
     await Article.create({
-      title,
-      content,
+      userId,
+      tanaman,
+      jumlah,
+      tanggal,
     });
-    res.json({ msg: 'Pembuatan Artikel Berhasil' });
+    res.json({ msg: 'Pencatatan Berhasil' });
   } catch (error) {
     console.log(error);
   }

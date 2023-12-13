@@ -2,7 +2,7 @@ import express from 'express';
 import {
   getUsers, Register, Login, Logout,
 } from '../controllers/Users.js';
-import { getArticle, makeArticle } from '../controllers/Articles.js';
+import { getNote, makeNote } from '../controllers/Pencatatan.js';
 import verifyToken from '../middleware/verifyToken.js';
 import RefreshToken from '../controllers/RefreshToken.js';
 
@@ -13,7 +13,7 @@ router.post('/users', Register);
 router.post('/login', Login);
 router.get('/token', RefreshToken);
 router.delete('/logout', Logout);
-router.get('/article', getArticle);
-router.post('/article', makeArticle);
+router.get('/note', getNote);
+router.post('/note', makeNote);
 
 export default router;

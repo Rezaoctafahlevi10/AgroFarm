@@ -4,9 +4,9 @@ import { createFormLogin } from '../templates/template-creator';
 const Login = {
   async render() {
     return `
-    <div class="login-page" id="login-container">
-    </div>
-      `;
+      <img class="background-register" src="../../img/background1.png" alt="">
+      <div class="login-page" id="login-container"></div>
+    `;
   },
   async afterRender() {
     await Weather.checkAuth();
