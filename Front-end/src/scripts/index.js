@@ -7,6 +7,7 @@ import './components/footer';
 import './components/pencatatan';
 import './components/contact';
 import './components/formRegister';
+import './components/deskripsi';
 import App from './views/App';
 import '../styles/style.scss';
 

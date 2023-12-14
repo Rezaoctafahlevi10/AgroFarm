@@ -1,0 +1,49 @@
+.deskripsi {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image {
+    width: 50%;
+    border-top-right-radius: 10px; /* Mengubah border-radius ke sisi kanan */
+    border-bottom-right-radius: 10px; /* Mengubah border-radius ke sisi kanan */
+    order: 2; /* Mengubah urutan elemen menjadi di sebelah kanan */
+}
+
+.desk {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    margin-right: 20px; /* Menambahkan margin pada sisi kanan (sesuaikan dengan kebutuhan) */
+    order: 1; /* Mengubah urutan elemen menjadi di sebelah kiri */
+}
+
+.deskripsi h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.deskripsi p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 600px) {
+    .deskripsi {
+        flex-direction: column;
+    }
+
+    .image,
+    .desk {
+        width: 100%;
+        margin: 20px 0; /* Menambahkan margin pada sisi atas dan bawah (sesuaikan dengan kebutuhan) */
+        order: initial; /* Mengembalikan urutan elemen ke urutan awal */
+        border-radius: 10px; /* Mengembalikan border-radius ke keadaan awal */
+    }
+}
