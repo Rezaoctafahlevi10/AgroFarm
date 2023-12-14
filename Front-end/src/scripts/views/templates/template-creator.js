@@ -8,8 +8,17 @@ const createDashboard = () => `
   </div>
 `;
 
-const createArticle = (article) => `
+const createArticle = (article) => `    
+  <div class="article"> 
     <h2>${article.judul}</h2>
+    <div id="article-img">
+      <img src="${article.gambar}" alt="${article.judul} Icon">
+    </div>
+    <p>${article.deskripsi.join('</p><p>')}</p>
+    <time>${article.waktu}</time>
+    <div class="location">Kota: ${article.kota}</div>
+    <div class="source">Sumber: <a href="${article.sumber}" target="_blank">${article.sumber}</a></div>
+  </div>
 `;
 
 const createFormLogin = () => `
