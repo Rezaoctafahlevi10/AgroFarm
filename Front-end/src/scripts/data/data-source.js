@@ -1,5 +1,6 @@
 import axios from 'axios';
 import swal from 'sweetalert';
+import { jwtDecode } from 'jwt-decode';
 import API_ENDPOINT from '../global/api-endpoint';
 
 class Weather {
@@ -128,24 +129,23 @@ class Weather {
 
   static async listNote() {
     try {
-      const response = await axios.get(API_ENDPOINT.NOTE);
+      const responseToken = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
+      const decoded = jwtDecode(responseToken.data.accessToken);
+      const getUserId = decoded.userId;
 
-      if (response.status === 200) {
-        const filteredData = response.data.filter((item) => item.userId === 2);
-        console.log(filteredData);
+      if (responseToken.status === 200) {
+        const response = await axios.get(API_ENDPOINT.NOTE);
+        const filteredData = response.data.filter((item) => item.userId === getUserId);
         return filteredData;
       }
-      swal({
-        title: 'Catatan tidak bisa di muat',
-        text: 'Pastikan jaringan anda tidak bermasalah',
-      });
       return null;
     } catch (error) {
       if (error.response) {
         swal({
           title: 'Catatan tidak bisa di muat',
-          text: 'Pastikan jaringan anda tidak bermasalah',
+          text: 'Harap login terlebih dahulu untuk menggunakan fitur ini',
         });
+        window.location.href = '/#/login';
       }
       return null;
     }

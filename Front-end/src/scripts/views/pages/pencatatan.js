@@ -13,30 +13,34 @@ const Pencatatan = {
 
   async afterRender() {
     await Weather.checkAuth();
-    const note = await Weather.listNote();
-    const pencatatanContainer = document.querySelector('#main');
-    pencatatanContainer.innerHTML = createNote(note);
+    try {
+      const note = await Weather.listNote();
+      const pencatatanContainer = document.querySelector('#main');
+      pencatatanContainer.innerHTML = createNote(note);
 
-    const tanaman = document.getElementById('jenis-tanaman');
-    const jumlah = document.getElementById('jumlah-panen');
-    const tanggal = document.getElementById('tanggal-panen');
-    const submitForm = document.querySelector('#saveNote');
+      const tanaman = document.getElementById('jenis-tanaman');
+      const jumlah = document.getElementById('jumlah-panen');
+      const tanggal = document.getElementById('tanggal-panen');
+      const submitForm = document.querySelector('#saveNote');
 
-    const responseToken = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
-    const decoded = jwtDecode(responseToken.data.accessToken);
-    const getUserId = decoded.userId;
+      const responseToken = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
+      const decoded = jwtDecode(responseToken.data.accessToken);
+      const getUserId = decoded.userId;
 
-    submitForm.addEventListener('click', async (e) => {
-      e.stopPropagation();
+      submitForm.addEventListener('click', async (e) => {
+        e.stopPropagation();
 
-      const noteData = {
-        userId: getUserId,
-        tanaman: tanaman.value,
-        jumlah: jumlah.value,
-        tanggal: tanggal.value,
-      };
-      Weather.makeNote(noteData);
-    });
+        const noteData = {
+          userId: getUserId,
+          tanaman: tanaman.value,
+          jumlah: jumlah.value,
+          tanggal: tanggal.value,
+        };
+        Weather.makeNote(noteData);
+      });
+    } catch (error) {
+      /* empty */
+    }
   },
 };
 

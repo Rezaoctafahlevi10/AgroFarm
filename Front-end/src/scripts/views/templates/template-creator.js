@@ -48,7 +48,7 @@ const createNote = (notes) => `
           ${notes.map((item) => `<ol>${item.jumlah}</ol>`).join('')}
           </td>
           <td>
-          ${notes.map((item) => `<ol>${item.tanggal}</ol>`).join('')}
+          ${notes.map((item) => `<ol>${item.tanggal.substring(8, 10)}-${item.tanggal.substring(5, 7)}-${item.tanggal.substring(0, 4)}</ol>`).join('')}
           </td>
         </tr>
       </table>
