@@ -117,7 +117,8 @@ const createFormRegister = () => `
 const createWeatherDetail = (weather) => `
   <div class="container-detail">
     <div class="head">
-      <h2>Sekarang anda berada di ${weather.description}</h2>
+    <h1>Selamat datang di Prediksi Cuaca</h1>
+      <h2>Berikut adalah ramalan cuaca di daerah ${weather.description}</h2>
     </div>
     <div class="body">
       ${weather.parameter[6].timerange
@@ -128,7 +129,7 @@ const createWeatherDetail = (weather) => `
         return `
               <div id="cuaca">
                 <p>
-                  Hari ini ${dateConverter(item.datetime)} cuacanya adalah ${weatherInfo.name}
+                  Pada tanggal ${dateConverter(item.datetime)} cuacanya adalah ${weatherInfo.name}
                   <img src="${weatherInfo.iconUrl}" alt="${weatherInfo.name} Icon">
                 </p>
               </div>
@@ -139,7 +140,6 @@ const createWeatherDetail = (weather) => `
     </div>
   </div>
 `;
-
 export {
   createDashboard,
   createFormRegister,

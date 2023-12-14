@@ -1,64 +1,163 @@
 .container-detail {
-  margin: 2%;
-  background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #5a9a6f;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #4CAF50;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.head {
   text-align: center;
-  transition: box-shadow 0.3s ease; /* Efek transisi untuk box-shadow */
+  margin-bottom: 20px;
 }
 
-.container-detail:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Efek bayangan saat hover */
+.head h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.container-detail .head {
-  margin-bottom: 2%;
-  background-color: rgb(9, 113, 35); /* Warna latar belakang untuk header */
-  color: white; /* Warna teks untuk header */
-  padding: 1%; /* Padding tambahan untuk header */
-  border-radius: 30px; /* Membuat sudut atas bulat */
+.head h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.container-detail h2 {
-  font-size: 2.5rem;
-  color: #ffffff; /* Warna teks untuk h2 */
-}
-
-.container-detail .body {
+.body {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.container-detail #cuaca {
-  flex-basis: 95%;
-  margin-bottom: 2%;
-  padding: 2%;
-  font-size: 30px;
-  background-color: #4CAF50; /* Warna latar belakang untuk cuaca */
-  color: white; /* Warna teks untuk cuaca */
-  border-radius: 55px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease; /* Efek transisi untuk scaling */
+#cuaca {
+  flex: 1 1 calc(33.33% - 20px);
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(45deg, #5a9a6f, #4CAF50);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.container-detail #cuaca:hover {
-  transform: scale(1.05); /* Efek scaling saat hover */
+#cuaca:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  z-index: -1;
+  border-radius: 10px;
 }
 
-.container-detail #cuaca img {
-  width: 70px; /* Sesuaikan ukuran gambar */
-  max-width: 100%;
-  max-height: 70px;
+#cuaca:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #5a9a6f, #4CAF50);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Tambahkan media queries untuk tampilan lebih kecil */
-@media only screen and (max-width: 768px) {
-  .container-detail #cuaca {
-    flex-basis: 100%;
+#cuaca.large {
+  flex: 1 1 calc(66.66% - 20px);
+}
+
+#cuaca.large p {
+  font-size: 26px;
+}
+
+.container-detail p {
+  font-size: 20px;
+  color: #e0e0e0;
+  transition: color 0.3s ease-in-out;
+}
+
+.container-detail img {
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#cuaca:hover img {
+  transform: rotate(360deg);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Add styles for the details view */
+.container-detail.active {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.container-detail.active #cuaca {
+  background: #fff;
+}
+
+.container-detail.active img {
+  border-radius: 0;
+  animation: rotate 3s infinite linear;
+}
+
+.container-detail.active .body {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#cuaca:not(:first-child) {
+  flex-basis: 40%;
+  max-width: 250px;
+  margin: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media (max-width: 768px) {
+  .container-detail {
+    width: 90%;
   }
 
-  .container-detail .body {
-    flex-direction: column;
+  #cuaca {
+    flex: 1 1 100%;
+  }
+
+  #cuaca.large {
+    flex: 1 1 100%;
+  }
+
+  #cuaca.large p {
+    font-size: 22px;
+  }
+
+  .container-detail p {
+    font-size: 18px;
+  }
+
+  .container-detail img {
+    width: 80px;
+    height: 80px;
   }
 }
