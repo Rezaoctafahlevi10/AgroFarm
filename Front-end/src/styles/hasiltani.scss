@@ -1,3 +1,62 @@
+.hasil body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.hasil h2 {
+  text-align: center;
+  color: #333;
+}
+
+.hasil {
+  margin: 20px auto;
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#customers {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#customers th, #customers td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#customers th {
+  background-color: #4caf50;
+  color: white;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+/* Style for ordered list inside table cells */
+#customers ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#customers ol li {
+  margin-bottom: 5px;
+}
+
+//pencatat
+
 .hasil-panen {
   background-color: white;
   color: #000000;
