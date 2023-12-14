@@ -30,7 +30,7 @@ const createFormLogin = () => `
   </form>
 `;
 
-const createNote = () => `
+const createNote = (notes) => `
   <section id="hasil-panen" class="hasil-panen">
     <h2>Pencatatan Hasil Panen</h2>
     <div class="hasil">
@@ -41,9 +41,15 @@ const createNote = () => `
           <th>Tanggal Panen</th>
         </tr>
         <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
+          <td>
+          ${notes.map((item) => `<ol>${item.tanaman}</ol>`).join('')}
+          </td>
+          <td>
+          ${notes.map((item) => `<ol>${item.jumlah}</ol>`).join('')}
+          </td>
+          <td>
+          ${notes.map((item) => `<ol>${item.tanggal}</ol>`).join('')}
+          </td>
         </tr>
       </table>
     </div>

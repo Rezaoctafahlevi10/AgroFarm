@@ -13,9 +13,9 @@ const Pencatatan = {
 
   async afterRender() {
     await Weather.checkAuth();
-    await Weather.listNote();
+    const note = await Weather.listNote();
     const pencatatanContainer = document.querySelector('#main');
-    pencatatanContainer.innerHTML = createNote();
+    pencatatanContainer.innerHTML = createNote(note);
 
     const tanaman = document.getElementById('jenis-tanaman');
     const jumlah = document.getElementById('jumlah-panen');
