@@ -18,6 +18,13 @@ const createArticle = (article) => `
     <time>${article.waktu}</time>
     <div class="location">Kota: ${article.kota}</div>
     <div class="source">Sumber: <a href="${article.sumber}" target="_blank">${article.sumber}</a></div>
+    <a href="#/article/${article.id}">Selengkapnya</a>
+  </div>
+`;
+
+const createArticleDetail = (article) => `    
+  <div class="article"> 
+    <h2>${article.judul}</h2>
   </div>
 `;
 
@@ -156,4 +163,5 @@ export {
   createWeatherDetail,
   createNote,
   createArticle,
+  createArticleDetail,
 };

@@ -186,6 +186,30 @@ class Weather {
       return null;
     }
   }
+
+  static async detailArticle(id) {
+    try {
+      const response = await axios.get(API_ENDPOINT.ARTICLE);
+
+      if (response.status === 200) {
+        // console.log(response.data.artikel[id]);
+        return response.data.artikel[id];
+      }
+      swal({
+        title: 'Artikel tidak bisa di muat',
+        text: 'Pastikan jaringan anda tidak bermasalah',
+      });
+      return null;
+    } catch (error) {
+      if (error.response) {
+        swal({
+          title: 'Artikel tidak bisa di muat',
+          text: 'Pastikan jaringan anda tidak bermasalah',
+        });
+      }
+      return null;
+    }
+  }
 }
 
 export default Weather;
