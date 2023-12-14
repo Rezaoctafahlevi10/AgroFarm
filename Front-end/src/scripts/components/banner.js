@@ -5,23 +5,18 @@ class CustomBanner extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <img src="../img/banner1.png" style="width:100%">
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="../img/banner2.png" style="width:100%">
- 
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="../img/banner3.png" style="width:100%">
-    </div>
-    
-    </div>
-        `;
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="../img/banner1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="../img/banner2.png" style="width:100%">
+        </div> 
+        <div class="mySlides fade">
+          <img src="../img/banner3.png" style="width:100%">
+        </div>
+      </div>
+    `;
   }
 }
 

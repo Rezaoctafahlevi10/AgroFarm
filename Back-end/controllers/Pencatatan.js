@@ -1,11 +1,11 @@
-import Article from '../models/PencatatanModel.js';
+import Pencatatan from '../models/PencatatanModel.js';
 
 export const getNote = async (_req, res) => {
   try {
-    const articles = await Article.findAll({
-      attributes: ['id', 'title', 'content'],
+    const note = await Pencatatan.findAll({
+      attributes: ['id', 'userId', 'tanaman', 'jumlah', 'tanggal'],
     });
-    res.json(articles);
+    res.json(note);
   } catch (error) {
     console.log(error);
   }
@@ -16,7 +16,7 @@ export const makeNote = async (_req, res) => {
     userId, tanaman, jumlah, tanggal,
   } = _req.body;
   try {
-    await Article.create({
+    await Pencatatan.create({
       userId,
       tanaman,
       jumlah,

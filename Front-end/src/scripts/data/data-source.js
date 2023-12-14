@@ -126,12 +126,50 @@ class Weather {
     }
   }
 
+  static async listNote() {
+    try {
+      const response = await axios.get(API_ENDPOINT.NOTE);
+
+      if (response.status === 200) {
+        const filteredData = response.data.filter((item) => item.userId === 2);
+        console.log(filteredData);
+        return filteredData;
+      }
+      swal({
+        title: 'Catatan tidak bisa di muat',
+        text: 'Pastikan jaringan anda tidak bermasalah',
+      });
+      return null;
+    } catch (error) {
+      if (error.response) {
+        swal({
+          title: 'Catatan tidak bisa di muat',
+          text: 'Pastikan jaringan anda tidak bermasalah',
+        });
+      }
+      return null;
+    }
+  }
+
+  static async makeNote(noteData) {
+    try {
+      const response = await axios.post(API_ENDPOINT.NOTE, noteData);
+      if (response.status === 200) {
+        swal('Pencatatan Berhasil!', 'success');
+      }
+    } catch (error) {
+      swal({
+        text: 'Mohon isi semua data',
+      });
+    }
+  }
+
   static async listArticle() {
     try {
       const response = await axios.get(API_ENDPOINT.ARTICLE);
 
       if (response.status === 200) {
-        return response.data;
+        return response.data.artikel;
       }
       swal({
         title: 'Artikel tidak bisa di muat',

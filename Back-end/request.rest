@@ -18,12 +18,12 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "email": "astaganaga@gmail.com",
-    "password": "udin123456"
+    "email": "iofi@gmail.com",
+    "password": "Deesnut1."
 }
 ###
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiU3lpaGFidWRkaW4iLCJlbWFpbCI6ImFzdGFnYW5hZ2FAZ21haWwuY29tIiwicHJvdmluc2kiOiJKYXdhIFRpbXVyIiwia290YSI6IkJhbnl1d2FuZ2kiLCJpYXQiOjE3MDI0Nzc4MDMsImV4cCI6MTcwMjQ3NzgyM30.OVM44Y9mxVXC7ryFlqLxNJE7T_fOTLp1ibevIsm3adQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiaW9maSIsImVtYWlsIjoiaW9maUBnbWFpbC5jb20iLCJwcm92aW5zaSI6Ikphd2FUaW11ciIsImtvdGEiOiJLb3RhIE1hbGFuZyIsImlhdCI6MTcwMjUyNDE2OSwiZXhwIjoxNzAyNTI0MTg5fQ.MhpQw1KDcITVNlOPCT9Q2RBiyc01TMUnd8L_5tOAOaQ
 
 ###
 
@@ -33,13 +33,15 @@ GET http://localhost:3000/token
 DELETE http://localhost:3000/logout
 
 ###
-GET http://localhost:3000/article
+GET http://localhost:3000/note
 
 ###
-POST http://localhost:3000/article
+POST http://localhost:3000/note
 Content-Type: application/json
 
 {
-    "title": "Cara menanam Jagung dengan cuaca yang ekstrim",
-    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    "userId": 2,
+    "tanaman": "Rose",
+    "jumlah": 10.5,
+    "tanggal": "2023-12-14T12:00:00Z"
 }

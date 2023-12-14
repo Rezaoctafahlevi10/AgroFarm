@@ -4,15 +4,15 @@ import { createArticle } from '../templates/template-creator';
 const Artikel = {
   async render() {
     return `
-      <h2>ARTIKEL</h2>
-      <div class="" id="main"></div>
+      <img class="background-login" src="../../img/background1.png" alt=""> 
+      <div class="" id="artikel-page"></div>
     `;
   },
 
   async afterRender() {
     await Weather.checkAuth();
     const article = await Weather.listArticle();
-    const articleContainer = document.querySelector('#main');
+    const articleContainer = document.querySelector('#artikel-page');
     article.forEach((articleItem) => {
       articleContainer.innerHTML += createArticle(articleItem);
     });
