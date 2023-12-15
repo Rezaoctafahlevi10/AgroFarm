@@ -7,6 +7,7 @@ const createDashboard = () => `
     <deskripsi-web></deskripsi-web>
     <custom-banner></custom-banner>
     <weather-prediction></weather-prediction>
+    <pencatatan-element></pencatatan-element>
   </div>
 `;
 

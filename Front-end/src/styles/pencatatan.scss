@@ -1,0 +1,60 @@
+.pencatat {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .pencatat .image {
+    width: 370px;
+    height: auto;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 128px; /* Mengubah border-radius ke sisi kanan */
+    border-bottom-right-radius: 128px;
+    order: 2;
+  }
+  
+  .deskrip {
+    width: 60%;
+  
+  
+  h1 {
+    color: #333;
+    font-size: 28px; /* Adjusted font size for title */
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #555;
+    font-size: 18px; /* Adjusted font size for paragraph */
+    margin-bottom: 20px;
+    line-height: 1.5; /* Adjusted line height for better readability */
+  }
+}
+  
+  .btn-1 {
+    background-color: #7EC275;
+    color: #fff;
+    padding: 10px 30px; /* Increased padding for a larger button */
+    font-size: 16px; /* Adjusted font size for the button */
+    border: none;
+    border-radius: 8px; /* Slightly increased border-radius for a more rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btn-1:hover {
+    background-color: #4e7549;
+  }
+
+  @media (max-width: 768px) {
+    .pencatat .image {
+      order: 1;
+      margin-bottom: 20px; /* Menambah margin untuk gambar pada tampilan layar kecil */
+    }
+  
+    .pencatat .deskrip {
+      width: 100%;
+    }
+  }

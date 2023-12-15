@@ -7,11 +7,12 @@ class Prediction extends HTMLElement {
     this.innerHTML = `
     <div class="prediksi">
     <div class="content">
-        <h1>AgroFarm</h1>
+        <h1>Prediksi Cuaca</h1>
+      <img src="../img/cuaca.jpg" alt="AgroFarm Image" class="image">
         <p>
            Kamu ingin melihat prediksi cuaca untuk beberapa hari kedepannya?
         </p>
-        <img src="../img/cuaca.jpg" alt="AgroFarm Image" class="image">
+
         <br>
         <a href="#/prediction"><button class="btn">Lihat Disini!</button></a>
     </div>

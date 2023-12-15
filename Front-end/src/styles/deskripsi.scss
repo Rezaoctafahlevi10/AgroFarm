@@ -6,13 +6,30 @@
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
+
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 30px;
 }
 
-.image {
-    width: 50%;
-    border-top-right-radius: 10px; /* Mengubah border-radius ke sisi kanan */
-    border-bottom-right-radius: 10px; /* Mengubah border-radius ke sisi kanan */
-    order: 2; /* Mengubah urutan elemen menjadi di sebelah kanan */
+p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+}
+
+.deskripsi .image {
+    width: 370px;
+    height: auto;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 128px; /* Mengubah border-radius ke sisi kanan */
+    border-bottom-left-radius: 128px;
+    order: 1;
 }
 
 .desk {
@@ -24,15 +41,7 @@
     order: 1; /* Mengubah urutan elemen menjadi di sebelah kiri */
 }
 
-.deskripsi h1 {
-    color: #333;
-    margin-bottom: 20px;
-}
 
-.deskripsi p {
-    color: #555;
-    line-height: 1.6;
-}
 
 @media screen and (max-width: 600px) {
     .deskripsi {
