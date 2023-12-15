@@ -14,7 +14,13 @@ footer {
 .socials img {
     width: 30px; /* Mengurangi ukuran gambar */
     height: 30px;
+    transition: transform 0.3s ease; /* Menambahkan transisi untuk efek hover */
 }
+
+.socials img:hover {
+    transform: scale(1.2); /* Efek scale saat dihover */
+}
+
 
 .credit {
     margin-top: 5px; /* Mengurangi margin top */

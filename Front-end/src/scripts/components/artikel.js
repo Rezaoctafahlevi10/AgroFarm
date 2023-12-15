@@ -5,39 +5,17 @@ class Artikel extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <!-- Artikel Section -->
-<section id="artikel" class="artikel">
-  <h2>Artikel</h2>
-
-  <div class="artikel-card">
-    <div class="artikel-image">
-      <img src="img/artikel1.jpg" alt="Artikel 1" />
-    </div>
-    <div class="artikel-content">
-      <h3>Judul Artikel 1</h3>
-      <p>Tanggal: 1 Januari 2023</p>
+    <div class="artikel-desc">
+    <img src="../img/artikel.jpg" alt="AgroFarm Image" class="artimg">
+    <div class="artdesc">
+      <h1>Artikel</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Kunci pertanian yang subur adalah dengan ilmu pengetahuan, dengan itu hasil panen dapat berpengaruh dengan cara-cara yang benar. 
+        Ingin tahu bagaimana cara bertani yang benar agar menghasilkan hasil yang memuaskan?
       </p>
-      <a href="#" class="btn">Baca Selengkapnya</a>
+      <a href="#/artikel"><button class="btn-2">Yuk Lihat Disini!</button></a>
     </div>
   </div>
-
-  <div class="artikel-card">
-    <div class="artikel-image">
-      <img src="img/artikel2.jpg" alt="Artikel 2" />
-    </div>
-    <div class="artikel-content">
-      <h3>Judul Artikel 2</h3>
-      <p>Tanggal: 5 Februari 2023</p>
-      <p>
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <a href="#" class="btn">Baca Selengkapnya</a>
-    </div>
-  </div>
-</section>
-
         `;
   }
 }

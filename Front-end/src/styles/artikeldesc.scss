@@ -1,0 +1,51 @@
+/* Container style */
+.artikel-desc {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+/* Image style */
+.artikel-desc .artimg {
+    width: 50%; /* Set width to 50% for the image */
+    max-width: 400px; /* Set maximum width for the image */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Add margin to separate image and text */
+}
+
+/* Text style */
+.artikel-desc .artdesc {
+    width: 50%; /* Set width to 50% for the text */
+}
+
+.artdesc h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.artdesc p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Button style */
+.artikel-desc .btn-2 {
+    background-color: #7EC275;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.artikel-desc .btn-2:hover {
+    background-color: #4e7549;
+}
