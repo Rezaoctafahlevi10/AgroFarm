@@ -103,18 +103,41 @@ class Weather {
     }
   }
 
-  static async detailWeather() {
+  static async detailWeather(getUserKota) {
     try {
+      const responseToken = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
+      const decoded = jwtDecode(responseToken.data.accessToken);
+      const getUserProvinces = decoded.provinsi;
       await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
 
-      const response = await axios.get(API_ENDPOINT.DETAIL);
+      const response = await axios.get(API_ENDPOINT.DETAIL(getUserProvinces));
 
       if (response.status === 200) {
         const { data } = response.data;
         data.forecast.area.map((areaItem) => areaItem.description);
 
-        return data.forecast.area[0];
+        return data.forecast.area[getUserKota];
       }
+      throw new Error('Failed to fetch data');
+    } catch (error) {
+      if (error.response) {
+        swal({
+          text: 'Harap login terlebih dahulu untuk menggunakan fitur ini',
+        });
+        window.location.href = '/#/login';
+      }
+      return null;
+    }
+  }
+
+  static async checkMiddleware() {
+    try {
+      const responseToken = await axios.get(API_ENDPOINT.TOKEN, { withCredentials: true });
+
+      if (responseToken) {
+        return null;
+      }
+
       throw new Error('Failed to fetch data');
     } catch (error) {
       if (error.response) {
@@ -192,7 +215,6 @@ class Weather {
       const response = await axios.get(API_ENDPOINT.ARTICLE);
 
       if (response.status === 200) {
-        // console.log(response.data.artikel[id]);
         return response.data.artikel[id];
       }
       swal({
