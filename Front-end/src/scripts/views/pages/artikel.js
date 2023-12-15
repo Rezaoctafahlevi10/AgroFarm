@@ -5,14 +5,14 @@ const Artikel = {
   async render() {
     return `
       <img class="background-login" src="../../img/background1.png" alt=""> 
-      <div class="" id="artikel-page"></div>
+      <div class="" id="artikel-list"></div>
     `;
   },
 
   async afterRender() {
     await Weather.checkAuth();
     const article = await Weather.listArticle();
-    const articleContainer = document.querySelector('#artikel-page');
+    const articleContainer = document.querySelector('#artikel-list');
     article.forEach((articleItem) => {
       articleContainer.innerHTML += createArticle(articleItem);
     });

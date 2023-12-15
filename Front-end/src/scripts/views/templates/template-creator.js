@@ -9,7 +9,7 @@ const createDashboard = () => `
   </div>
 `;
 
-const createArticle = (article) => `    
+const createArticleDetail = (article) => `    
   <div class="article"> 
     <h2>${article.judul}</h2>
     <div id="article-img">
@@ -19,13 +19,16 @@ const createArticle = (article) => `
     <time>${article.waktu}</time>
     <div class="location">Kota: ${article.kota}</div>
     <div class="source">Sumber: <a href="${article.sumber}" target="_blank">${article.sumber}</a></div>
-    <a href="#/article/${article.id}">Selengkapnya</a>
   </div>
 `;
 
-const createArticleDetail = (article) => `    
-  <div class="article"> 
+const createArticle = (article) => `    
+  <div class="article-list"> 
     <h2>${article.judul}</h2>
+    <div id="article-img">
+      <img src="${article.gambar}" alt="${article.judul} Icon">
+    </div>
+    <p>${article.deskripsi[0].slice(0, 90)}...<a href="#/article/${article.id}">Selengkapnya</a></p>
   </div>
 `;
 

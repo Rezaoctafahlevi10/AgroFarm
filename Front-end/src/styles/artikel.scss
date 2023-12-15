@@ -1,6 +1,5 @@
-/* Main article container */
-.article {
-    max-width: 800px;
+.article-list {
+    max-width: 100%;
     margin: 20px auto;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -8,85 +7,103 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Menyusun konten di tengah */
+    display: grid;
+    align-items: center;
     text-align: center;
+
+    h2 {
+      color: #333;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    #article-img {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 15px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+    }
+    p {
+      margin: 15px 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
   }
   
-  .article:hover {
+  .article-list:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
   }
   
-  /* Article title */
-  .article h2 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  
-  /* Article image */
-  #article-img {
-    width: 100%; /* Mengisi lebar konten */
-    max-width: 600px; /* Batas maksimum lebar gambar */
-    margin: 0 auto 15px; /* Memusatkan gambar */
-    overflow: hidden; /* Mencegah gambar melebihi batas */
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #article-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
   
   #article-img:hover img {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  /* Article content */
-  .article p {
-    margin: 15px 0;
-    color: #555;
-    line-height: 1.6;
-  }
   
-  /* Article metadata (time, location, source) */
-  .article time {
-    display: block;
-    color: #888;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .location, .source {
-    color: #777;
-  }
-  
-  /* Article links */
-  .article a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .article a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
-  
-  /* Responsive Design */
-@media (max-width: 600px) {
-    .article {
-      padding: 15px;
+  @media screen and (min-width: 1280px) {
+    #artikel-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      padding-inline: 2.5rem;
     }
+  }
   
-    #article-img {
-      max-width: 100%;
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+    #artikel-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      padding-inline: 2.5rem;
+    }
+  }
+  
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    #artikel-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      padding-inline: 2.5rem;
+    }
+  }
+  
+  @media all and (min-width: 480px) and (max-width: 769px) {
+    #artikel-list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2.5rem;
+      padding-inline: 2.5rem;
+    }
+  }
+  
+  @media all and (max-width: 480px) {
+    #artikel-list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+      padding-inline: 1.5rem;
     }
   }

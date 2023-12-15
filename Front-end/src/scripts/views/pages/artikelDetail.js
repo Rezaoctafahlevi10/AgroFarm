@@ -6,7 +6,7 @@ const ArtikelDetail = {
   async render() {
     return `
       <img class="background-login" src="../../img/background1.png" alt=""> 
-      <div class="" id="artikel-page"></div>
+      <div class="" id="artikel-detail"></div>
     `;
   },
 
@@ -15,7 +15,7 @@ const ArtikelDetail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const article = await Weather.detailArticle(url.id);
     console.log(article);
-    const articleContainer = document.querySelector('#artikel-page');
+    const articleContainer = document.querySelector('#artikel-detail');
     articleContainer.innerHTML += createArticleDetail(article);
   },
 };
