@@ -6,6 +6,7 @@ const createDashboard = () => `
     <hero-element></hero-element>
     <deskripsi-web></deskripsi-web>
     <custom-banner></custom-banner>
+    <weather-prediction></weather-prediction>
   </div>
 `;
 

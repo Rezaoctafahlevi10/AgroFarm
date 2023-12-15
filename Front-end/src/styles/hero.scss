@@ -1,15 +1,17 @@
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-image: url("../public/img/agrofarmbg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
-    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
-  }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../public/img/agrofarmbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  max-width: 100%; /* Added for image size optimization */
+  max-height: 100%; /* Added for image size optimization */
+}
   .profile-dropdown {
     position: relative;
   }
@@ -100,23 +102,23 @@
 
   @media only screen and (max-width: 768px) {
     .hero .content {
-        top: 50px; /* Adjusted top position for smaller screens */
-        padding: 1.4rem 5%; /* Adjusted padding for smaller screens */
-        position: static; /* Remove fixed positioning for smaller screens */
+        top: 50px;
+        padding: 1.4rem 5%;
+        position: static;
     }
 
     .hero .content h1 {
-        font-size: 3em; /* Adjusted font size for smaller screens */
-        line-height: 1.2; /* Ensure proper line height */
-        margin-bottom: 10px; /* Add margin to separate from other elements */
+        font-size: 3em;
+        line-height: 1.2;
+        margin-bottom: 10px;
     }
 
     .hero .content p {
-        font-size: 1.4rem; /* Adjusted font size for smaller screens */
-        margin-top: 0.5rem; /* Adjusted top margin for smaller screens */
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
     }
 
     .hero .content .cta {
-        padding: 1rem 2rem; /* Adjusted padding for smaller screens */
+        padding: 1rem 2rem;
     }
-}
+  }
