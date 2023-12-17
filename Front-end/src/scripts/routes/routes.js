@@ -11,7 +11,7 @@ const routes = {
   '/prediction': Weather,
   '/pencatatan': Pencatatan,
   '/artikel': Artikel,
-  '/article/:id': ArtikelDetail,
+  '/artikel/:id': ArtikelDetail,
   '/login': Login,
   '/register': Register,
 };

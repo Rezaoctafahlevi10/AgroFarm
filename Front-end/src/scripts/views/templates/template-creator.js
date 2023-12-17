@@ -30,7 +30,7 @@ const createArticle = (article) => `
     <div id="article-img">
       <img src="${article.gambar}" alt="${article.judul} Icon">
     </div>
-    <p>${article.deskripsi[0].slice(0, 90)}...<a href="#/article/${article.id}">Selengkapnya</a></p>
+    <p>${article.deskripsi[0].slice(0, 90)}...<a href="#/artikel/${article.id}">Selengkapnya</a></p>
   </div>
 `;
 
@@ -139,29 +139,29 @@ const createFormRegister = () => `
 const createWeatherDetail = (weather) => `
   <div class="container-detail">
     <div class="head">
-    <h1>Selamat datang di Prediksi Cuaca</h1>
+      <h1>Selamat datang di Prediksi Cuaca</h1>
       <h2>Berikut adalah ramalan cuaca di daerah ${weather.description}</h2>
     </div>
     <div class="body">
       ${weather.parameter[6].timerange
-    .map(
-      (item) => {
-        const weatherInfo = weatherType(item.value[0].text);
-
-        return `
-              <div id="cuaca">
-                <p>
-                  Pada tanggal ${dateConverter(item.datetime)} cuacanya adalah ${weatherInfo.name}
-                  <img src="${weatherInfo.iconUrl}" alt="${weatherInfo.name} Icon">
-                </p>
-              </div>
-            `;
-      },
-    )
+    .map((item) => {
+      const weatherInfo = weatherType(item.value[0].text);
+      return `
+            <div id="cuaca">
+              <p>
+                Pada tanggal ${dateConverter(item.datetime)} cuacanya adalah ${weatherInfo.name}
+                <img src="${weatherInfo.iconUrl}" alt="${weatherInfo.name} Icon">
+              </p>
+            </div>
+          `;
+    })
     .join('')}
     </div>
   </div>
 `;
+
+export default createWeatherDetail;
+
 export {
   createDashboard,
   createFormRegister,

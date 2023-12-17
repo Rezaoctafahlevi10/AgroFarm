@@ -4,11 +4,15 @@
     .artikel-desc {
       display: flex;
       flex-direction: column;
-        h1 {
-            color: #333;
+      h1 {
+          color: #333;
         }
         p {
-            color: #555;
+          color: #555;
+        }
+
+        a {
+          color: #fff;
         }
   
         .btn-2 { 

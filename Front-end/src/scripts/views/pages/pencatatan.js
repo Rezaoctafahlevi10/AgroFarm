@@ -7,6 +7,10 @@ import { createNote } from '../templates/template-creator';
 const Pencatatan = {
   async render() {
     return `
+    <div id="loading-screen">
+      <h1>sedang memuat data</h1>
+      <div class="loader"></div>
+    </div>
     <div class="" id="main"></div>
     `;
   },

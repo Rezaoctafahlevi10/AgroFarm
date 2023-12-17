@@ -14,7 +14,7 @@ class Pencatatan extends HTMLElement {
         <p>
           Masih bingung untuk mencatat hasil panen yang kamu dapatkan? Tenang, AgroFarm memiliki fitur Pencatatan kamu bisa coba disini.
         </p>
-        <button class="btn-1">Yuk Coba!<a href="#/pencatatan"></a></button>
+        <button class="btn-1"><a href="#/pencatatan">Yuk Coba!</a></button>
       </div>
     </div>
   `;

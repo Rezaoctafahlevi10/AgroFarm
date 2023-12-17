@@ -113,6 +113,10 @@ class Weather {
       const response = await axios.get(API_ENDPOINT.DETAIL(getUserProvinces));
 
       if (response.status === 200) {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          loadingScreen.style.display = 'none';
+        }
         const { data } = response.data;
         data.forecast.area.map((areaItem) => areaItem.description);
 
@@ -157,6 +161,10 @@ class Weather {
       const getUserId = decoded.userId;
 
       if (responseToken.status === 200) {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          loadingScreen.style.display = 'none';
+        }
         const response = await axios.get(API_ENDPOINT.NOTE);
         const filteredData = response.data.filter((item) => item.userId === getUserId);
         return filteredData;
@@ -179,6 +187,7 @@ class Weather {
       const response = await axios.post(API_ENDPOINT.NOTE, noteData);
       if (response.status === 200) {
         swal('Pencatatan Berhasil!', 'success');
+        window.location.href = '/#/pencatatan';
       }
     } catch (error) {
       swal({
@@ -192,6 +201,10 @@ class Weather {
       const response = await axios.get(API_ENDPOINT.ARTICLE);
 
       if (response.status === 200) {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          loadingScreen.style.display = 'none';
+        }
         return response.data.artikel;
       }
       swal({
@@ -215,6 +228,10 @@ class Weather {
       const response = await axios.get(API_ENDPOINT.ARTICLE);
 
       if (response.status === 200) {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          loadingScreen.style.display = 'none';
+        }
         return response.data.artikel[id];
       }
       swal({

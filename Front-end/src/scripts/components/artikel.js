@@ -15,7 +15,7 @@ class Artikel extends HTMLElement {
           Kunci pertanian yang subur adalah dengan ilmu pengetahuan, dengan itu hasil panen dapat berpengaruh dengan cara-cara yang benar. 
           Ingin tahu bagaimana cara bertani yang benar agar menghasilkan hasil yang memuaskan?
         </p>
-        <button class="btn-2">Yuk Lihat Disini!<a href="#/artikel"></a></button>
+        <button class="btn-2"><a href="#/artikel">Yuk Lihat Disini!</a></button>
       </div>
     </div>
     `;
