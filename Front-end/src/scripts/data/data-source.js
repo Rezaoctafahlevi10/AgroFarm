@@ -187,11 +187,10 @@ class Weather {
       const response = await axios.post(API_ENDPOINT.NOTE, noteData);
       if (response.status === 200) {
         swal('Pencatatan Berhasil!', 'success');
-        window.location.href = '/#/pencatatan';
       }
     } catch (error) {
       swal({
-        text: 'Mohon isi semua data',
+        text: error.response.data.msg,
       });
     }
   }

@@ -11,10 +11,15 @@ export const getNote = async (_req, res) => {
   }
 };
 
-export const makeNote = async (_req, res) => {
+export const makeNote = async (req, res) => {
   const {
     userId, tanaman, jumlah, tanggal,
-  } = _req.body;
+  } = req.body;
+
+  if (!userId || !tanaman || !jumlah || !tanggal) {
+    return res.status(400).json({ msg: 'Semua field harus diisi' });
+  }
+
   try {
     await Pencatatan.create({
       userId,
@@ -25,5 +30,6 @@ export const makeNote = async (_req, res) => {
     res.json({ msg: 'Pencatatan Berhasil' });
   } catch (error) {
     console.log(error);
+    res.status(500).json({ msg: 'Terjadi kesalahan saat membuat catatan' });
   }
 };
