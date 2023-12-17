@@ -1,69 +1,156 @@
-/* Container style */
 .prediksi {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    border-top: #333 solid 2px;
+    .prediksi-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .prediksi-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #333;
+        }
+        
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            color: #555;
+        }
+        .btn { 
+            background-color: #7EC275;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background-color: #4e7549;
+        }
+    }
 }
 
-/* Content style */
-.content {
-    width: 100%;
-    text-align: center;
-
-    h1 {
-        color: #333;
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
+@media screen and (min-width: 1280px) {
+    .prediksi {
+        width: 100%;
+        .prediksi-img {
+            width: 100%;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            img {
+                border-radius: 0.6rem;
+                width: 50%;
+            }
+        }
     
-    p {
-        color: #555;
-        font-size: 18px;
-        margin-bottom: 20px;
-        text-align: justify;
+        .prediksi-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
     }
 }
 
-/* Image style */
-.content .image {
-    width: 100%;
-    max-width: 400px; /* Adjust the maximum width as needed */
-    height: auto;
-    border-radius: 92px;
-    margin-bottom: 20px;
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .prediksi {
+        width: 100%;
+        .prediksi-img {
+            width: 100%;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            img {
+                border-radius: 0.6rem;
+                width: 50%;
+            }
+        }
+    
+        .prediksi-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    }
 }
 
-.image:hover {
-    transform: scale(1.05); /* Slightly scale up the image on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Adjusted box-shadow on hover */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .prediksi {
+        width: 100%;
+        .prediksi-img {
+            width: 100%;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            img {
+                border-radius: 0.6rem;
+                width: 50%;
+            }
+        }
+    
+        .prediksi-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    }
 }
 
-/* Button style */
-.content .btn {
-    background-color: #7EC275;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none; /* Remove default button underline */
+@media all and (min-width: 480px) and (max-width: 769px) {
+    .prediksi {
+        width: 100%;
+        .prediksi-img {
+            width: 100%;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            img {
+                border-radius: 0.6rem;
+                width: 80%;
+            }
+        }
+    
+        .prediksi-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    }
 }
 
-.content .btn:hover {
-    background-color: #4e7549;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .content .image {
-        max-width: 100%; /* Adjusted image width for smaller screens */
-        border-radius: 50%;
+@media all and (max-width: 480px) {
+    .prediksi {
+        width: 100%;
+        .prediksi-img {
+            width: 100%;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            img {
+                border-radius: 0.6rem;
+                width: 100%;
+            }
+        }
+    
+        .prediksi-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
     }
 }

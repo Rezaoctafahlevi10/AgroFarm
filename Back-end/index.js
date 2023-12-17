@@ -19,7 +19,10 @@ try {
   console.error(error);
 }
 
-app.use(cors({ credentials: true, origin: 'http://localhost:9000' }));
+const allowedOrigins = ['http://localhost:9000', 'https://udondondodonagrofarm.netlify.app'];
+
+app.use(cors({ credentials: true, origin: allowedOrigins }));
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);

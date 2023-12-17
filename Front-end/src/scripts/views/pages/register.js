@@ -6,13 +6,13 @@ const Register = {
   async render() {
     return `
     <img class="background-register" src="../../img/background1.png" alt=""> 
-    <div class="innerRegist" id="main"></div>
+    <div id="register-main"></div>
     `;
   },
 
   async afterRender() {
     await Weather.checkAuth();
-    const registerContainer = document.querySelector('#main');
+    const registerContainer = document.querySelector('#register-main');
     registerContainer.innerHTML = createFormRegister();
 
     const provinceSel = document.getElementById('provinsi');

@@ -18,20 +18,12 @@ header {
   }
 }
 .navbar {
-  align-items: center;
   background-color: #7ec275;
   display: flex;
-  justify-content: space-between;
   
   .navbar-nav {
-    align-items: center;
-    padding: 1.4rem;
     a {
       color: #fff;
-      display: inline-block;
-      font-size: 1.3rem;
-      margin: 10px;
-      text-align: left;
     }
     a:hover {
       color: red;
@@ -75,11 +67,48 @@ header {
 }
 
 @media screen and (min-width: 1280px) {
+  .navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  }
   
+  .navbar-nav {
+    align-items: center;
+    padding: 1.4rem;
+    a {
+      display: inline-block;
+      font-size: 1.3rem;
+      margin: 10px;
+      text-align: left;
+    }
+    a:hover::after {
+      transform: scaleX(0.5);
+    }
+  }
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
+  .navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  }
   
+  .navbar-nav {
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    a {
+      display: inline-block;
+      font-size: 1.3rem;
+      margin: 7px;
+      text-align: left;
+    }
+    a:hover::after {
+      transform: scaleX(0.5);
+    }
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -91,13 +120,23 @@ header {
     transform: translate(-1100px, 190px);
     transition: 0.3s;
     width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     .navbar-nav {
+
+      padding: 1rem;
       display: flex;
       flex-direction: column;
+      text-align: center;
       
       a {
         margin: 5px;
       }
+    }
+    .nav-auth {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -123,9 +162,14 @@ header {
     .navbar-nav {
       display: flex;
       flex-direction: column;
+      text-align: center;
       a {
         margin: 3px;
       }
+    }
+    .nav-auth {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -144,25 +188,31 @@ header {
     position: absolute;
     display: flex;
     flex-direction: column;
-    -webkit-transform: translate(-1100px, 165px);
-    transform: translate(-1100px, 165px);
+    -webkit-transform: translate(-1100px, 160px);
+    transform: translate(-1100px, 160px);
     transition: 0.3s;
     width: 100%;
     .navbar-nav {
       display: flex;
       flex-direction: column;
+      text-align: center;
       a {
         margin: 1px;
       }
+    }
+    .nav-auth {
+      display: flex;
+      justify-content: center;
     }
   }
 
   #menu {
     display: block;
+    padding: 0;
   }
 
   .open {
-    -webkit-transform: translate(0, 165px);
-    transform: translate(0, 165px);
+    -webkit-transform: translate(0, 160px);
+    transform: translate(0, 160px);
   }
 }

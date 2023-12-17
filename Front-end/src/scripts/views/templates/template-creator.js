@@ -5,7 +5,6 @@ const createDashboard = () => `
   <div class="container-list">
     <hero-element></hero-element>
     <deskripsi-web></deskripsi-web>
-    <custom-banner></custom-banner>
     <weather-prediction></weather-prediction>
     <pencatatan-element></pencatatan-element>
     <custom-artikel></custom-artikel>

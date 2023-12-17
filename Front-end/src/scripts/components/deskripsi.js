@@ -6,16 +6,18 @@ class Deskripsi extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="deskripsi">
-      <img src="../img/agrofarm.png" alt="AgroFarm Image" class="image">
-      <div class="desk">
+        <div class="desc-img">
+          <img src="../img/agrofarm.png" alt="AgroFarm Image" class="image">
+        </div>
+        <div class="desk">
           <h1>AgroFarm</h1>
           <p>
-              AgroFarm adalah sebuah aplikasi web yang dirancang khusus untuk memenuhi kebutuhan para petani dalam mendukung dan meningkatkan efisiensi proses pertanian.
-              Aplikasi ini menyediakan berbagai fitur dan layanan yang dirancang untuk memberikan solusi informatif dan praktis kepada para petani.
+            AgroFarm adalah sebuah aplikasi web yang dirancang khusus untuk memenuhi kebutuhan para petani dalam mendukung dan meningkatkan efisiensi proses pertanian.
+            Aplikasi ini menyediakan berbagai fitur dan layanan yang dirancang untuk memberikan solusi informatif dan praktis kepada para petani.
           </p>
+        </div>
       </div>
-  </div>
-              `;
+    `;
   }
 }
 

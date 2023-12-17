@@ -9,8 +9,8 @@
   position: relative;
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
-  max-width: 100%; /* Added for image size optimization */
-  max-height: 100%; /* Added for image size optimization */
+  max-width: 100%;
+  max-height: 100%;
 }
   .profile-dropdown {
     position: relative;

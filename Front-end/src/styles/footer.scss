@@ -1,7 +1,7 @@
 footer {
     background-color: #7ec275;
     color: #fff;
-    padding: 0px; /* Mengurangi padding */
+    padding: 0px;
     text-align: center;
 }
 
@@ -12,18 +12,18 @@ footer {
 }
 
 .socials img {
-    width: 30px; /* Mengurangi ukuran gambar */
+    width: 30px;
     height: 30px;
-    transition: transform 0.3s ease; /* Menambahkan transisi untuk efek hover */
+    transition: transform 0.3s ease;
 }
 
 .socials img:hover {
-    transform: scale(1.2); /* Efek scale saat dihover */
+    transform: scale(1.2);
 }
 
 
 .credit {
-    margin-top: 5px; /* Mengurangi margin top */
+    margin-top: 5px;
 }
 
 .credit a {
@@ -42,23 +42,22 @@ footer {
 
 .contact p {
     font-weight: bold;
-    font-size: 18px; /* Mengurangi ukuran font */
-    margin-bottom: 5px; /* Mengurangi margin bottom */
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 
-/* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
     footer {
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 10px;
     }
 
     .socials a {
-        margin: 0 5px; /* Adjusted margin for smaller screens */
+        margin: 0 5px;
     }
 
     .socials img {
-        width: 20px; /* Adjusted image size for smaller screens */
+        width: 20px;
         height: 20px;
     }
 
@@ -71,7 +70,7 @@ footer {
     }
 
     .contact p {
-        font-size: 16px; /* Adjusted font size for smaller screens */
+        font-size: 16px;
         margin-bottom: 5px;
     }
 }

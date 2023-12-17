@@ -1,60 +1,209 @@
 .pencatat {
+  display: flex;
+  flex-direction: row-reverse;
+  border-top: #333 solid 2px;
+  .pencatat-content {
     display: flex;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .pencatat .image {
-    width: 370px;
-    height: auto;
-    margin-left: 45px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-top-right-radius: 128px; /* Mengubah border-radius ke sisi kanan */
-    border-bottom-right-radius: 128px;
-    order: 2;
-  }
-  
-  .deskrip {
-    width: 60%;
-  
-  
-  h1 {
-    color: #333;
-    font-size: 28px; /* Adjusted font size for title */
-    margin-bottom: 10px;
-  }
-  
-  p {
-    color: #555;
-    font-size: 18px; /* Adjusted font size for paragraph */
-    margin-bottom: 20px;
-    line-height: 1.5; /* Adjusted line height for better readability */
+    flex-direction: column;
+      h1 {
+          color: #333;
+      }
+      p {
+          color: #555;
+      }
+
+      .btn-1 { 
+        background-color: #7EC275;
+        width: 130px;
+        color: #fff;
+        padding: 10px 20px;
+        margin-block: 1rem;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+    
+    .btn-1:hover {
+        background-color: #4e7549;
+    }
   }
 }
-  
-  .btn-1 {
-    background-color: #7EC275;
-    color: #fff;
-    padding: 10px 30px; /* Increased padding for a larger button */
-    font-size: 16px; /* Adjusted font size for the button */
-    border: none;
-    border-radius: 8px; /* Slightly increased border-radius for a more rounded button */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .btn-1:hover {
-    background-color: #4e7549;
-  }
 
-  @media (max-width: 768px) {
-    .pencatat .image {
-      order: 1;
-      margin-bottom: 20px; /* Menambah margin untuk gambar pada tampilan layar kecil */
-    }
-  
-    .pencatat .deskrip {
+@media screen and (min-width: 1280px) {
+  .pencatat {
       width: 100%;
-    }
+  
+      .pencatat-img {
+          width: 50%;
+          padding-inline: 2rem;
+          padding-block: 1rem;
+          img {
+              border-radius: 0.6rem;
+              width: 100%;
+              border-top-right-radius: 128px;
+              border-bottom-right-radius: 128px;
+          }
+      }
+  
+      .pencatat-content {
+          padding: 2rem;
+          h1 {
+              margin-bottom: 20px;
+              font-size: 30px;
+          }
+          
+          p {
+              line-height: 1.6;
+              font-size: 18px;
+          }
+      }
   }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .pencatat {
+      width: 100%;
+  
+      .pencatat-img {
+          width: 100%;
+          padding-inline: 2rem;
+          img {
+              border-radius: 0.6rem;
+              width: 100%;
+              border-top-right-radius: 128px;
+              border-bottom-right-radius: 128px;
+          }
+      }
+  
+      .pencatat-content {
+          padding: 1rem;
+          h1 {
+              margin-bottom: 20px;
+              font-size: 30px;
+          }
+          
+          p {
+              line-height: 1.6;
+              font-size: 18px;
+          }
+      }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .pencatat {
+      width: 100%;
+      flex-direction: column;
+  
+      .pencatat-img {
+        display: flex;
+        justify-content: center;
+        padding-inline: 2rem;
+        width: 100%;
+        img {
+          border-radius: 0.6rem;
+          width: 80%;
+          border-bottom-left-radius: 128px;
+          border-top-left-radius: 64px;
+          border-bottom-right-radius: 128px;
+          border-top-right-radius: 64px;
+        }
+      }
+  
+      .pencatat-content {
+        display: flex;
+        text-align: center;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          margin-bottom: 20px;
+          font-size: 30px;
+        }
+
+        p {
+          line-height: 1.6;
+          font-size: 18px;
+        }
+      }
+    }
+  }    
+
+@media all and (min-width: 480px) and (max-width: 769px) {
+  .pencatat {
+      width: 100%;
+      flex-direction: column;
+  
+      .pencatat-img {
+          width: 100%;
+          padding-inline: 2rem;
+          img {
+              border-radius: 0.6rem;
+              width: 100%;
+              border-bottom-left-radius: 64px;
+              border-top-left-radius: 32px;
+              border-top-right-radius: 32px;
+              border-bottom-right-radius: 64px;
+          }
+      }
+  
+      .pencatat-content {
+        display: flex;
+        text-align: center;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+
+          h1 {
+              margin-bottom: 20px;
+              font-size: 30px;
+          }
+          
+          p {
+              line-height: 1.6;
+              font-size: 18px;
+          }
+      }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .pencatat {
+      width: 100%;
+      flex-direction: column;
+  
+      .pencatat-img {
+          width: 100%;
+          padding-inline: 2rem;
+          img {
+              border-radius: 0.6rem;
+              width: 100%;
+              border-bottom-left-radius: 32px;
+              border-top-left-radius: 16px;
+              border-top-right-radius: 16px;
+              border-bottom-right-radius: 32px;
+          }
+      }
+  
+      .pencatat-content {
+        display: flex;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+
+          h1 {
+              margin-bottom: 20px;
+              font-size: 30px;
+          }
+          
+          p {
+              line-height: 1.6;
+              font-size: 18px;
+          }
+      }
+  }
+}

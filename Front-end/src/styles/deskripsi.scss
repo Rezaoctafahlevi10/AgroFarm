@@ -1,58 +1,171 @@
 .deskripsi {
-    max-width: 800px;
-    margin: 50px auto;
     display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-
-
-h1 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 30px;
-}
-
-p {
-    color: #555;
-    line-height: 1.6;
-    font-size: 18px;
-}
-
-}
-
-.deskripsi .image {
-    width: 400px;
-    height: auto;
-    margin-right: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-top-left-radius: 128px; /* Mengubah border-radius ke sisi kanan */
-    border-bottom-left-radius: 128px;
-    order: 1;
-}
-
-.desk {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: justify;
-    margin-right: 20px; /* Menambahkan margin pada sisi kanan (sesuaikan dengan kebutuhan) */
-    order: 1; /* Mengubah urutan elemen menjadi di sebelah kiri */
-}
-
-
-
-@media screen and (max-width: 600px) {
-    .deskripsi {
-        flex-direction: column;
-    }
-
-    .image,
     .desk {
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .deskripsi {
         width: 100%;
-        margin: 20px 0; /* Menambahkan margin pada sisi atas dan bawah (sesuaikan dengan kebutuhan) */
-        order: initial; /* Mengembalikan urutan elemen ke urutan awal */
-        border-radius: 10px; /* Mengembalikan border-radius ke keadaan awal */
+    
+        .desc-img {
+            width: 100%;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            img {
+                border-radius: 0.6rem;
+                width: 100%;
+                border-top-left-radius: 128px;
+                border-bottom-left-radius: 128px;
+            }
+        }
+    
+        .desk {
+            padding: 1rem;
+            h1 {
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+            
+            p {
+                line-height: 1.6;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .deskripsi {
+        width: 100%;
+    
+        .desc-img {
+            width: 100%;
+            padding-inline: 2rem;
+            img {
+                border-radius: 0.6rem;
+                width: 80%;
+                border-top-left-radius: 128px;
+                border-bottom-left-radius: 128px;
+            }
+        }
+    
+        .desk {
+            padding: 1rem;
+            h1 {
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+            
+            p {
+                line-height: 1.6;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .deskripsi {
+        width: 100%;
+        flex-direction: column;
+    
+        .desc-img {
+            width: 100%;
+            padding-inline: 2rem;
+            img {
+                border-radius: 0.6rem;
+                width: 100%;
+                border-bottom-left-radius: 128px;
+                border-top-left-radius: 64px;
+                border-top-right-radius: 64px;
+                border-bottom-right-radius: 128px;
+            }
+        }
+    
+        .desk {
+            padding: 1rem;
+            h1 {
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+            
+            p {
+                line-height: 1.6;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 769px) {
+    .deskripsi {
+        width: 100%;
+        flex-direction: column;
+    
+        .desc-img {
+            width: 100%;
+            padding-inline: 2rem;
+            img {
+                border-radius: 0.6rem;
+                width: 100%;
+                border-bottom-left-radius: 64px;
+                border-top-left-radius: 32px;
+                border-top-right-radius: 32px;
+                border-bottom-right-radius: 64px;
+            }
+        }
+    
+        .desk {
+            padding: 1rem;
+            h1 {
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+            
+            p {
+                line-height: 1.6;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    .deskripsi {
+        width: 100%;
+        flex-direction: column;
+    
+        .desc-img {
+            width: 100%;
+            padding-inline: 2rem;
+            img {
+                border-radius: 0.6rem;
+                width: 100%;
+                border-bottom-left-radius: 64px;
+                border-top-left-radius: 32px;
+                border-top-right-radius: 32px;
+                border-bottom-right-radius: 64px;
+            }
+        }
+    
+        .desk {
+            padding: 1rem;
+            h1 {
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+            
+            p {
+                line-height: 1.6;
+                font-size: 18px;
+            }
+        }
     }
 }
