@@ -16,7 +16,7 @@ class Weather {
       }
     } catch (error) {
       swal({
-        text: 'Mohon isi semua data',
+        text: error.response.data.msg,
       });
     }
   }
