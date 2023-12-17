@@ -23,4 +23,4 @@ TUTORIALS
 ## Back-End
 1. "cd back-end"
 2. jalankan "npm install"
-3. jalangkan "npm run client"
+3. jalangkan "npm run start"
