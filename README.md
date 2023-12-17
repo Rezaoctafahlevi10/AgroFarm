@@ -1,4 +1,14 @@
+# Anggota Kelompok
+
+1. (F277YB348)	– (Haikal Dzaky Muktighani)
+2. (F359XB297) 	– (Evita Cahyani)
+3. (F227YB308) 	– (Riyatnandar Wahyu Wasono Aji)
+4. (F227YB372) 	– (Moh. Syihabuddin)
+5. (S227YB460) 	– (Reza Octa Fahlevi)
+
 # AgroFarm
+
+![image](https://github.com/Rezaoctafahlevi10/AgroFarm/assets/127718704/fab34099-6721-4a83-a435-97df2205299d)
 
 TUTORIALS
 
