@@ -26,7 +26,7 @@ Untuk memulai petualangan dengan AgroFarm, ikuti panduan sederhana ini:
 git clone https://github.com/Rezaoctafahlevi10/AgroFarm.git
 ```
 
-### Front-End Magic
+### Front-End
 
 Jika dunia desain dan penggunaan antarmuka memikat hati Anda, coba langkah-langkah ini:
 
@@ -48,7 +48,7 @@ npm install
 npm run client
 ```
 
-### Back-End Wizardry
+### Back-End
 
 Jika Anda lebih tertarik pada sisi server, rasakan keajaiban ini:
 
@@ -75,3 +75,6 @@ npm run start
 Kami mengundang Anda untuk bergabung dalam perjalanan menarik ini! Jika Anda memiliki ide, saran, atau sihir yang ingin Anda bagikan, buka _issue_ atau kirimkan _pull request_. Bersama-sama, kita bisa membuat pertanian menjadi lebih baik!
 
 Terima kasih telah menyambangi AgroFarm. Mari bersama-sama menciptakan masa depan yang subur dan berkelanjutan! 🌾✨
+
+Kamu bisa lihat Project web kami di 
+https://agrofarm-capstone.netlify.app/
